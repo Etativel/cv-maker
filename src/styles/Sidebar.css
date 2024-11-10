@@ -9,3 +9,15 @@
 .test {
   height: 200px;
 }
+
+/* Profile Form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.profile-form > label {
+  display: flex;
+  flex-direction: column;
+}

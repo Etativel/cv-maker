@@ -4,7 +4,18 @@ import Canvas from "./components/Canvas";
 import { useState } from "react";
 
 function App() {
-  const [profile, setProfile] = useState({});
+  const [profile, setProfile] = useState({
+    // name: "",
+    // number: "",
+    // email: "",
+    // linkedin: "",
+    // github: "",
+    name: "Muhammad Farhan Maulana",
+    number: "082145479632",
+    email: "iusdeav@gmail.com",
+    linkedin: "http://localhost:5173/",
+    github: "http://localhost:5173/",
+  });
   const [education, setEducation] = useState({});
   const [experience, setExperience] = useState({});
   const [projects, setProjects] = useState({});

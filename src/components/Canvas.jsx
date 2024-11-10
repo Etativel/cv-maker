@@ -1,28 +1,37 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import "../styles/Canvas.css";
 
 function NameAndLinks({ profile, font }) {
   return (
     <div className="name-and-link-container" style={{ fontFamily: font }}>
-      <h1 className="h1-name">Jake Ryan</h1>
+      <h1 className="h1-name">{profile.name}</h1>
       <ul className="profile-link-list-style profile-link">
-        <li className="profile-li">123-456-789</li>
+        <li className="profile-li">{profile.number}</li>
         <li>|</li>
         <li>
           <a className="profile-li" href="#">
-            user@gmail.com
+            {profile.email}
           </a>
         </li>
         <li>|</li>
         <li>
-          <a className="profile-li" href="#">
-            linkedin.com/in/jake
+          <a
+            className="profile-li"
+            href={profile.linkedin !== "" ? profile.linkedin : "#"}
+          >
+            linkedin.com/in/
+            {profile.name.split(" ")[0].toLowerCase()}
           </a>
         </li>
         <li>| </li>
         <li>
-          <a className="profile-li" href="#">
-            github.com/jake
+          <a
+            className="profile-li"
+            href={profile.github !== "" ? profile.github : "#"}
+          >
+            github.com/
+            {profile.name.split(" ")[0].toLowerCase()}
           </a>
         </li>
       </ul>
