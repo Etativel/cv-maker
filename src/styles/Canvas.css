@@ -8,10 +8,12 @@
 }
 .canvas {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
   /* align-items: center; */
   /* text-align: center; */
-  height: 100vh;
+  min-height: fit-content;
   width: 100vw;
   /* background-color: red; */
   overflow-y: auto;
@@ -23,10 +25,12 @@
   align-items: center;
   flex-direction: column;
   width: 22cm;
+  /* height: 29.7cm; */
   height: 29.7cm;
   /* height: 60.7cm; */
   margin-top: 24px;
   margin-bottom: 24px;
+  padding-bottom: 24px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -54,6 +58,10 @@ a {
   list-style: none;
   display: flex;
   gap: 6px;
+}
+
+.profile-li {
+  font-size: 14.666px;
 }
 
 /* Education */

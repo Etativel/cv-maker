@@ -1,32 +1,38 @@
 /* eslint-disable react/prop-types */
 import "../styles/Canvas.css";
-// import html2pdf from "html2pdf.js";
-function NameAndLinks({ font }) {
+
+function NameAndLinks({ profile, font }) {
   return (
     <div className="name-and-link-container" style={{ fontFamily: font }}>
       <h1 className="h1-name">Jake Ryan</h1>
       <ul className="profile-link-list-style profile-link">
-        <li>123-456-789</li>
+        <li className="profile-li">123-456-789</li>
         <li>|</li>
         <li>
-          <a href="#">user@gmail.com</a>
+          <a className="profile-li" href="#">
+            user@gmail.com
+          </a>
         </li>
         <li>|</li>
         <li>
-          <a href="#">linkedin.com/in/jake</a>
+          <a className="profile-li" href="#">
+            linkedin.com/in/jake
+          </a>
         </li>
         <li>| </li>
         <li>
-          <a href="#">github.com/jake</a>
+          <a className="profile-li" href="#">
+            github.com/jake
+          </a>
         </li>
       </ul>
     </div>
   );
 }
 
-function EducationSection() {
+function EducationSection({ education, font }) {
   return (
-    <div className="education-container">
+    <div className="education-container" style={{ fontFamily: font }}>
       <div className="education-head">Education</div>
       <hr />
       <div className="edu-1 edu-content">
@@ -65,9 +71,9 @@ function EducationSection() {
   );
 }
 
-function ExperienceSection() {
+function ExperienceSection({ experience, font }) {
   return (
-    <div className="experience-container">
+    <div className="experience-container" style={{ fontFamily: font }}>
       <div className="experience-head">Experience</div>
       <hr />
       <div className="experience-point-con">
@@ -180,9 +186,9 @@ function ExperienceSection() {
   );
 }
 
-function ProjectSection() {
+function ProjectSection({ projects, font }) {
   return (
-    <div className="projects-container">
+    <div className="projects-container" style={{ fontFamily: font }}>
       <div className="project-head">Projects</div>
       <hr />
       <div className="project-point-con">
@@ -255,9 +261,9 @@ function ProjectSection() {
   );
 }
 
-function TechnicalSkillSection() {
+function TechnicalSkillSection({ skills, font }) {
   return (
-    <div className="skill-container">
+    <div className="skill-container" style={{ fontFamily: font }}>
       <div className="skill-head">Technical Skills</div>
       <hr />
       <div className="skill-point-con">
@@ -313,16 +319,45 @@ function TechnicalSkillSection() {
   );
 }
 
-export default function Canvas() {
+function Paper({ profile, education, experience, projects, skills, font }) {
+  return (
+    <div className="paper">
+      <NameAndLinks profile={profile} font={font} />
+      <EducationSection education={education} font={font} />
+      <ExperienceSection experience={experience} font={font} />
+      <ProjectSection projects={projects} font={font} />
+      <TechnicalSkillSection skills={skills} font={font} />
+    </div>
+  );
+}
+
+// Canvas Component
+export default function Canvas({
+  profile,
+  education,
+  experience,
+  projects,
+  skills,
+  font,
+}) {
   return (
     <div className="canvas">
-      <div className="paper">
-        <NameAndLinks font={"san-serif"} />
-        <EducationSection font={"san-serif"} />
-        <ExperienceSection font={"san-serif"} />
-        <ProjectSection font={"san-serif"} />
-        <TechnicalSkillSection font={"san-serif"} />
-      </div>
+      <Paper
+        profile={profile}
+        education={education}
+        experience={experience}
+        projects={projects}
+        skills={skills}
+        font={font}
+      />
+      {/* <Paper
+        profile={profile}
+        education={education}
+        experience={experience}
+        projects={projects}
+        skills={skills}
+        font={font}
+      /> */}
     </div>
   );
 }

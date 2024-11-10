@@ -1,6 +1,11 @@
 .sidebar {
-  background-color: #0b192c;
+  /* background-color: #0b192c; */
   /* border-right: 1px solid white; */
   width: 40rem;
-  display: none;
+  /* display: none; */
+  overflow-y: auto;
+}
+
+.test {
+  height: 200px;
 }
