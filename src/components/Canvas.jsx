@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/prop-types */
 import "../styles/Canvas.css";
 function NameAndLinks({ font }) {
   return (
@@ -28,17 +27,30 @@ function EducationSection() {
   return (
     <div className="education-container">
       <div className="education-head">Education</div>
-      <div className="edu-1">
-        <p className="education-place">Southwestern University</p>
-        <p className="education-info">
-          Bachelor of Arts in Computer Science, Minor in Business
-        </p>
+      <hr />
+      <div className="edu-1 edu-content">
+        <div className="edu-info">
+          <p className="education-place">Southwestern University</p>
+          <p className="education-info">
+            Bachelor of Arts in Computer Science, Minor in Business
+          </p>
+        </div>
+        <div className="edu-date">
+          <p>Georgetown, TX</p>
+          <p>Aug. 2018 - May 2021</p>
+        </div>
       </div>
-      <div className="edu-2">
-        <p className="education-place">Southwestern University</p>
-        <p className="education-info">
-          Bachelor of Arts in Computer Science, Minor in Business
-        </p>
+      <div className="edu-1 edu-content">
+        <div className="edu-info">
+          <p className="education-place">Southwestern University</p>
+          <p className="education-info">
+            Bachelor of Arts in Computer Science, Minor in Business
+          </p>
+        </div>
+        <div className="edu-date">
+          <p>Georgetown, TX</p>
+          <p>Aug. 2018 - May 2021</p>
+        </div>
       </div>
     </div>
   );

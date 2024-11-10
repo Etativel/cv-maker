@@ -3,9 +3,9 @@
   --f-12pt: 16px;
   --f-14pt: 18.67px;
 } */
-* {
-  /* border: solid black 1px; */
-}
+/* * {
+  border: solid black 1px;
+} */
 .canvas {
   display: flex;
   justify-content: center;
@@ -35,6 +35,7 @@ a {
 
 .h1-name {
   text-align: center;
+  padding-top: 32px;
 }
 
 .name-and-link-container {
@@ -56,4 +57,24 @@ a {
   padding-left: 32px;
   padding-right: 32px;
   width: 100%;
+}
+
+.education-head {
+  padding-top: 12px;
+}
+
+.edu-content {
+  padding-left: 18px;
+  padding-right: 6px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  display: flex;
+}
+
+.edu-info {
+  flex-grow: 1;
+}
+.edu-date > p ~ p,
+.edu-date > p {
+  text-align: end;
 }
