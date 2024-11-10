@@ -15,17 +15,19 @@
   width: 100vw;
   /* background-color: red; */
   overflow-y: auto;
+  background-color: #000000;
 }
 
 .paper {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 21cm; /* A4 width */
-  height: 29.7cm; /* A4 height */
+  width: 21cm;
+  height: 29.7cm;
   margin-top: 24px;
   margin-bottom: 24px;
-  border: solid black 1px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -53,16 +55,19 @@ a {
 }
 
 /* Education */
+.experience-container,
 .education-container {
   padding-left: 32px;
   padding-right: 32px;
   width: 100%;
 }
 
+.experience-head,
 .education-head {
   padding-top: 12px;
 }
 
+.exp-content,
 .edu-content {
   padding-left: 18px;
   padding-right: 6px;
@@ -71,10 +76,25 @@ a {
   display: flex;
 }
 
+.exp-info,
 .edu-info {
   flex-grow: 1;
 }
-.edu-date > p ~ p,
+.exp-date > p,
 .edu-date > p {
   text-align: end;
+}
+
+/* Experience */
+.exp-point {
+  padding-left: calc(32px + 18px);
+  padding-right: 32px;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.exp-desc {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 14.666px;
 }

@@ -4,11 +4,6 @@
   display: flex;
 }
 
-.sidebar {
-  background-color: blue;
-  width: 40rem;
-}
-
 @media print {
   .sidebar {
     display: none;
