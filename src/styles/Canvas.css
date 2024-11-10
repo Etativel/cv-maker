@@ -1,0 +1,59 @@
+/* :root {
+  --f-11pt: 14.67px;
+  --f-12pt: 16px;
+  --f-14pt: 18.67px;
+} */
+* {
+  /* border: solid black 1px; */
+}
+.canvas {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  height: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+  overflow-y: auto;
+}
+
+.paper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 21cm; /* A4 width */
+  height: 29.7cm; /* A4 height */
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: solid black 1px;
+}
+
+a {
+  color: black;
+  padding: 0px;
+}
+
+.h1-name {
+  text-align: center;
+}
+
+.name-and-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+
+.profile-link-list-style {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+}
+
+/* Education */
+.education-container {
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
