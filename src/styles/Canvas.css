@@ -3,9 +3,9 @@
   --f-12pt: 16px;
   --f-14pt: 18.67px;
 } */
-/* * {
-  border: solid black 1px;
-} */
+* {
+  /* border: solid black 1px; */
+}
 .canvas {
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@
   flex-direction: column;
   width: 22cm;
   height: 29.7cm;
+  /* height: 60.7cm; */
   margin-top: 24px;
   margin-bottom: 24px;
   background: #fff;
@@ -56,6 +57,7 @@ a {
 }
 
 /* Education */
+.skill-container,
 .projects-container,
 .experience-container,
 .education-container {
@@ -64,13 +66,14 @@ a {
   width: 100%;
 }
 
+.skill-head,
 .project-head,
 .experience-head,
 .education-head {
   /* padding-top: 12px; */
   font-size: large;
 }
-
+.skill-content,
 .proj-content,
 .exp-content,
 .edu-content {
@@ -81,6 +84,7 @@ a {
   display: flex;
 }
 
+.skill-info,
 .exp-info,
 .edu-info {
   flex-grow: 1;
@@ -93,6 +97,7 @@ a {
 }
 
 /* Experience */
+.skill-point,
 .proj-point,
 .exp-point {
   padding-left: calc(32px + 18px);
@@ -117,4 +122,13 @@ a {
 .proj-info {
   display: flex;
   flex-grow: 1;
+}
+
+/* Skills */
+.skill-info {
+  display: flex;
+}
+.skills {
+  /* width: fit-content; */
+  width: 80%;
 }

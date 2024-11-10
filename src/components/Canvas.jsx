@@ -76,7 +76,7 @@ function ExperienceSection() {
             <p className="experience-place">
               <strong>Undergraduate Research Assistant</strong>
             </p>
-            <p className="experience-info">
+            <p className="experience-location">
               <i>Texas A&M University</i>
             </p>
           </div>
@@ -109,7 +109,7 @@ function ExperienceSection() {
             <p className="experience-place">
               <strong>Information Technology Support Specialist</strong>
             </p>
-            <p className="experience-info">
+            <p className="experience-location">
               <i>Southwestern University</i>
             </p>
           </div>
@@ -141,7 +141,7 @@ function ExperienceSection() {
             <p className="experience-place">
               <strong>Artificial Intelligence Research Assistant </strong>
             </p>
-            <p className="experience-info">
+            <p className="experience-location">
               <i>Southwestern University</i>
             </p>
           </div>
@@ -182,7 +182,7 @@ function ExperienceSection() {
 
 function ProjectSection() {
   return (
-    <div className=".projects-container">
+    <div className="projects-container">
       <div className="project-head">Projects</div>
       <hr />
       <div className="project-point-con">
@@ -255,6 +255,64 @@ function ProjectSection() {
   );
 }
 
+function TechnicalSkillSection() {
+  return (
+    <div className="skill-container">
+      <div className="skill-head">Technical Skills</div>
+      <hr />
+      <div className="skill-point-con">
+        <div className="skill-1 skill-content">
+          <div className="skill-info-container">
+            <div className="skill-info">
+              <p className="skill-name">
+                <strong>Languages:</strong>
+              </p>
+              <p className="vertical-line-break"></p>
+              <p className="skills">
+                <i>
+                  Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R
+                </i>
+              </p>
+            </div>
+            <div className="skill-info">
+              <p className="skill-name">
+                <strong>Frameworks:</strong>
+              </p>
+              <p className="vertical-line-break"></p>
+              <p className="skills">
+                <i>
+                  React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI
+                </i>
+              </p>
+            </div>
+            <div className="skill-info">
+              <div className="skill-name">
+                <strong>Developer Tools:</strong>
+              </div>
+              <div className="vertical-line-break"></div>
+              <div className="skills">
+                <i>
+                  Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual
+                  Studio, PyCharm, IntelliJ, Eclipse
+                </i>
+              </div>
+            </div>
+            <div className="proj-info">
+              <p className="skill-name">
+                <strong>Libraries:</strong>
+              </p>
+              <p className="vertical-line-break"></p>
+              <p className="skills">
+                <i>pandas, NumPy, Matplotlib</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Canvas() {
   return (
     <div className="canvas">
@@ -263,6 +321,7 @@ export default function Canvas() {
         <EducationSection font={"san-serif"} />
         <ExperienceSection font={"san-serif"} />
         <ProjectSection font={"san-serif"} />
+        <TechnicalSkillSection font={"san-serif"} />
       </div>
     </div>
   );
