@@ -4,7 +4,10 @@ import "../styles/Canvas.css";
 
 function NameAndLinks({ profile, font }) {
   return (
-    <div className="name-and-link-container" style={{ fontFamily: font }}>
+    <div
+      className="name-and-link-container showed"
+      style={{ fontFamily: font }}
+    >
       <h1 className="h1-name">{profile.name}</h1>
       <ul className="profile-link-list-style profile-link">
         <li className="profile-li">{profile.number}</li>

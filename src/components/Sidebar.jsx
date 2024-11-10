@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import "../styles/Sidebar.css";
 
 function ProfileForm({ profile, setProfile }) {
+  const [visibility, setVisibility] = useState("visible");
+  const profileSection = document.querySelector(".name-and-link-container");
   function handleProfile(e) {
     e.preventDefault();
     setProfile({
@@ -12,52 +15,87 @@ function ProfileForm({ profile, setProfile }) {
       linkedin: document.querySelector(".linkedin-input").value,
       github: document.querySelector(".github-input").value,
     });
+    profileSection.classList.add("showed");
+  }
+  // function handleVisibility() {
+  //   const profileSection = document.querySelector(".name-and-link-container");
+  //   if (!visibility) {
+  //     profileSection.classList.add("showed");
+  //   } else {
+  //     profileSection.classList.add("hidden");
+  //   }
+  //   setVisibility(!visibility);
+  // }
+  function hidePersonalDetails() {
+    const profileForm = document.querySelector(".profile-form");
+    profileForm.classList.toggle("hide");
   }
   return (
-    <>
+    <div className="personal-details-container">
+      <div className="profile-head">
+        <p className="personal-detail-h1">Personal Details</p>
+        <button className="hide-personal-details" onClick={hidePersonalDetails}>
+          Hide
+        </button>
+      </div>
       <form action="" className="profile-form" onSubmit={handleProfile}>
-        <label htmlFor="">
-          Your Name
+        <div className="form-group">
+          <label htmlFor="name-input">
+            <strong>Your Name</strong>
+          </label>
           <input
             type="text"
+            id="name-input"
             placeholder="Name"
             required
-            className="name-input"
+            className="name-input personal-input"
           />
-        </label>
-        <label htmlFor="">
-          Your Phone Number
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="phone-number-input">Your Phone Number</label>
           <input
             type="text"
+            id="phone-number-input"
             placeholder="Phone number"
             required
-            className="phone-number-input"
+            className="phone-number-input personal-input"
           />
-        </label>
-        <label htmlFor="">
-          Contact Email
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email-input">Contact Email</label>
           <input
             type="email"
+            id="email-input"
             placeholder="Email"
             required
-            className="email-input"
+            className="email-input personal-input"
           />
-        </label>
-        <label htmlFor="">
-          Linkedin
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="linkedin-input">Linkedin</label>
           <input
             type="text"
+            id="linkedin-input"
             placeholder="Linkedin"
-            className="linkedin-input"
+            className="linkedin-input personal-input"
           />
-        </label>
-        <label htmlFor="">
-          Github
-          <input type="text" placeholder="Github" className="github-input" />
-        </label>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="github-input">Github</label>
+          <input
+            type="text"
+            id="github-input"
+            placeholder="Github"
+            className="github-input personal-input"
+          />
+        </div>
         <button type="submit">Add</button>
       </form>
-    </>
+    </div>
   );
 }
 
