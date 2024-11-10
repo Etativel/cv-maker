@@ -5,11 +5,12 @@
 }
 
 @media print {
-  .sidebar {
-    display: none;
+  .canvas {
+    height: auto; /* Allow the content to adjust to A4 page size */
+    width: auto;
   }
   .paper {
-    width: 21cm;
-    height: 29.7cm;
+    width: 100%; /* Ensure the PDF matches the width of A4 */
+    height: auto;
   }
 }
