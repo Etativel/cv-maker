@@ -5,7 +5,7 @@
 
 .sidebar {
   /* background-color: #000000; */
-  background-color: blue;
+  background-color: black;
   /* border-right: 1px solid white; */
   flex-grow: 1;
   /* min-width: 600px; */
@@ -26,6 +26,7 @@
 }
 
 /* Profile Form */
+.project-details-container,
 .experience-details-container,
 .education-details-container,
 .personal-details-container {
@@ -47,6 +48,7 @@
   cursor: pointer;
 }
 
+.project-head,
 .experience-head,
 .education-head,
 .profile-head {
@@ -56,6 +58,7 @@
   align-items: center;
   margin-bottom: 8px;
 }
+.project-detail-h1,
 .experience-detail-h1,
 .education-detail-h1,
 .personal-detail-h1 {
@@ -64,6 +67,7 @@
   /* margin-bottom: 8px; */
 }
 
+.project-form,
 .experience-form,
 .education-form,
 .profile-form {
@@ -79,6 +83,7 @@
   flex-direction: column;
 }
 
+.project-input,
 .experience-input,
 .education-input,
 .personal-input {
@@ -87,6 +92,7 @@
   border: none;
   background-color: gainsboro;
 }
+.project-input:focus,
 .experience-input:focus,
 .education-input:focus,
 .personal-input:focus {
@@ -96,12 +102,14 @@
 label {
   padding-bottom: 8px;
 }
+.project-form > input,
 .experience-form > input,
 .education-form > input,
 .profile-form > input {
   padding-top: 12px;
 }
 
+.project-form > label,
 .experience-form > label,
 .education-form > label,
 .profile-form > label {

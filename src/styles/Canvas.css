@@ -27,7 +27,7 @@
   /* background-color: red; */
   overflow-y: auto;
   overflow-x: auto;
-  background-color: #000000;
+  background-color: #0000;
 
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
@@ -38,12 +38,11 @@
   align-items: center;
   flex-direction: column;
   width: 22cm;
-  /* height: 29.7cm; */
   height: 29.7cm;
   /* height: 60.7cm; */
   margin-top: 24px;
   margin-bottom: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 64px;
   /* padding-bottom: 12px; */
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
