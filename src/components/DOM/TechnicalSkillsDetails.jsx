@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-export default function TechnicalSkillDetails({ skills, font }) {
+export default function TechnicalSkillsDetails({ skills, font }) {
   return (
     <div className="skill-container" style={{ fontFamily: font }}>
       <div className="skill-head">Technical Skills</div>

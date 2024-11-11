@@ -44,6 +44,7 @@
   margin-top: 24px;
   margin-bottom: 24px;
   padding-bottom: 24px;
+  /* padding-bottom: 12px; */
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

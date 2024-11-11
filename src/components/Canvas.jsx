@@ -4,7 +4,7 @@ import ProfileDetails from "./DOM/ProfileDetails";
 import EducationDetails from "./DOM/EducationDetails";
 import ExperienceDetails from "./DOM/ExperienceDetails";
 import ProjectDetails from "./DOM/ProjectDetails";
-import TechnicalSkillDetails from "./DOM/TechnicalSkillDetails";
+import TechnicalSkillsDetails from "./DOM/TechnicalSkillsDetails";
 
 function Paper({ profile, education, experience, projects, skills, font }) {
   return (
@@ -13,7 +13,7 @@ function Paper({ profile, education, experience, projects, skills, font }) {
       <EducationDetails education={education} font={font} />
       <ExperienceDetails experience={experience} font={font} />
       <ProjectDetails projects={projects} font={font} />
-      <TechnicalSkillDetails skills={skills} font={font} />
+      <TechnicalSkillsDetails skills={skills} font={font} />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import "../styles/Sidebar.css";
 import ProfileForm from "./form/PersonalForm";
 import EducationSection from "./form/EducationForm";
 import ExperienceSection from "./form/ExperienceForm";
-
+import { downloadPDF } from "../utils/DownloadPdf";
 export default function Sidebar({
   profile,
   education,
@@ -28,6 +28,7 @@ export default function Sidebar({
         experience={experience}
         setExperience={setExperience}
       />
+      <button onClick={downloadPDF}>Download PDF</button>
     </div>
   );
 }
