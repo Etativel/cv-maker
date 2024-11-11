@@ -3,9 +3,6 @@
   --f-12pt: 16px;
   --f-14pt: 18.67px;
 } */
-* {
-  /* border: solid black 1px; */
-}
 
 .hidden {
   visibility: hidden;

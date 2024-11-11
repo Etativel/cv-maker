@@ -26,6 +26,7 @@
 }
 
 /* Profile Form */
+.experience-details-container,
 .education-details-container,
 .personal-details-container {
   background-color: white;
@@ -46,6 +47,7 @@
   cursor: pointer;
 }
 
+.experience-head,
 .education-head,
 .profile-head {
   display: flex;
@@ -54,7 +56,7 @@
   align-items: center;
   margin-bottom: 8px;
 }
-
+.experience-detail-h1,
 .education-detail-h1,
 .personal-detail-h1 {
   font-size: 1.5rem;
@@ -62,6 +64,7 @@
   /* margin-bottom: 8px; */
 }
 
+.experience-form,
 .education-form,
 .profile-form {
   display: flex;
@@ -76,6 +79,7 @@
   flex-direction: column;
 }
 
+.experience-input,
 .education-input,
 .personal-input {
   padding: 8px;
@@ -83,7 +87,8 @@
   border: none;
   background-color: gainsboro;
 }
-.education-input,
+.experience-input:focus,
+.education-input:focus,
 .personal-input:focus {
   outline-color: blue;
 }
@@ -91,12 +96,22 @@
 label {
   padding-bottom: 8px;
 }
+.experience-form > input,
 .education-form > input,
 .profile-form > input {
   padding-top: 12px;
 }
+
+.experience-form > label,
 .education-form > label,
 .profile-form > label {
   display: flex;
   flex-direction: column;
+}
+
+/* Experience */
+.exp-li {
+  /* list-style: none; */
+  /* padding-left: 12px; */
+  margin-left: 24px;
 }
