@@ -6,9 +6,9 @@ import { useState } from "react";
 function App() {
   const [profile, setProfile] = useState({});
   const [education, setEducation] = useState([]);
-  const [experience, setExperience] = useState({});
-  const [projects, setProjects] = useState({});
-  const [skills, setSkills] = useState({});
+  const [experience, setExperience] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [font, setFont] = useState("Times New Roman");
 
   return (

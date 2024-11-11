@@ -244,6 +244,10 @@ function EducationSection({ education, setEducation }) {
     setEditIndex(index);
   };
 
+  const handleDelete = (index) => {
+    const updatedEducation = education.filter((_, i) => i !== index);
+    setEducation(updatedEducation);
+  };
   const handleCancelEdit = () => {
     setEditIndex(null);
   };
@@ -285,6 +289,7 @@ function EducationSection({ education, setEducation }) {
                 <strong>End Date:</strong> {edu.eduEndDate}
               </p>
               <button onClick={() => handleEdit(index)}>Edit</button>
+              <button onClick={() => handleDelete(index)}>Delete</button>
             </>
           )}
         </div>
@@ -293,6 +298,10 @@ function EducationSection({ education, setEducation }) {
       {editIndex === null && <EducationForm onSubmit={addEducation} />}
     </div>
   );
+}
+
+function ExperienceForm({ initialValues, onSubmit, onCancel }) {
+  const [formValue, setFOrmValues] = useState(initialValues || {});
 }
 
 export default function Sidebar({
