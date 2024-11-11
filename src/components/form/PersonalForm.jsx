@@ -16,9 +16,6 @@ export default function ProfileForm({ profile, setProfile }) {
     <div className="personal-details-container">
       <div className="profile-head">
         <p className="personal-detail-h1">Personal Details</p>
-        {/* <button className="hide-personal-details" onClick={showPersonalDetails}>
-            Edit
-          </button> */}
       </div>
       <form action="" className="profile-form" onSubmit={handleSubmit}>
         <div className="form-group">
