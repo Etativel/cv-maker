@@ -22,13 +22,18 @@
   align-items: center;
   /* align-items: center; */
   /* text-align: center; */
-  min-height: fit-content;
+  /* min-height: fit-content; */
+  height: 100vh;
+
   width: fit-content;
   flex-grow: 3;
   /* background-color: red; */
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
   background-color: #000000;
+
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
 .paper {
@@ -69,6 +74,8 @@ a {
   list-style: none;
   display: flex;
   gap: 6px;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-li {

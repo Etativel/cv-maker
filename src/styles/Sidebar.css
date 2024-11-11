@@ -1,5 +1,6 @@
 .sidebar-container {
   height: 100vh;
+  overflow-y: auto;
 }
 
 .sidebar {
@@ -11,20 +12,28 @@
   /* display: none; */
   height: fit-content;
   overflow-y: auto;
+  height: 100vh;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide {
   display: none !important;
 }
 
-/* Profile Form */
+.show {
+  display: block !important;
+}
 
+/* Profile Form */
+.education-details-container,
 .personal-details-container {
   background-color: white;
   margin: 32px;
   padding: 12px;
   border-radius: 6px;
   font-family: Arial, Helvetica, sans-serif;
+  /* width: fit-content; */
 }
 
 .hide-personal-details {
@@ -37,37 +46,44 @@
   cursor: pointer;
 }
 
+.education-head,
 .profile-head {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 8px;
 }
 
+.education-detail-h1,
 .personal-detail-h1 {
   font-size: 1.5rem;
   font-weight: bold;
   /* margin-bottom: 8px; */
 }
 
+.education-form,
 .profile-form {
   display: flex;
   flex-direction: column;
   /* padding: 0px 24px; */
+
   gap: 8px;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
 }
 
+.education-input,
 .personal-input {
   padding: 8px;
   border-radius: 6px;
   border: none;
   background-color: gainsboro;
 }
-
+.education-input,
 .personal-input:focus {
   outline-color: blue;
 }
@@ -75,11 +91,11 @@
 label {
   padding-bottom: 8px;
 }
-
+.education-form > input,
 .profile-form > input {
   padding-top: 12px;
 }
-
+.education-form > label,
 .profile-form > label {
   display: flex;
   flex-direction: column;
