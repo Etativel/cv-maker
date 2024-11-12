@@ -2,6 +2,8 @@
   --blue: #1a91f0;
   --blue-text: #1a91f0;
   --blue-back: #f4faff;
+  --red-delete: rgba(252, 0, 5, 255);
+  --green-edit: #28a745;
 }
 
 .sidebar-container {
@@ -169,7 +171,7 @@ label {
   background-color: white;
   border: 0px;
   margin-top: 24px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   color: var(--blue-text);
   font-size: 1rem;
   font-weight: bold;
@@ -266,4 +268,124 @@ label {
 
 .load-template {
   background-color: #00ff9c;
+}
+
+/* Skill */
+.s-input {
+  width: 100%;
+  min-height: fit-content;
+  height: auto;
+  padding: 16px;
+  background-color: #eff2f9;
+  border: none;
+  outline: none;
+  resize: vertical;
+  overflow: hidden;
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+.b-t-skill {
+  margin-bottom: 8px;
+}
+
+/* General */
+.form-cancel-btn,
+.form-add-btn {
+  display: block;
+  width: 90px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.form-cancel-btn {
+  background-color: var(--red-delete);
+  color: white;
+  border: solid 2px var(--red-delete);
+}
+.form-add-btn {
+  background-color: var(--blue-text);
+  color: white;
+  border: solid 2px var(--blue-text);
+}
+
+.form-cancel-btn:hover {
+  background-color: white;
+  border: solid var(--red-delete) 2px;
+  color: var(--red-delete);
+}
+.form-add-btn:hover {
+  background-color: white;
+  border: solid var(--blue-text) 2px;
+  color: var(--blue-text);
+}
+
+/* Submission Display */
+/* Education */
+.submission-container {
+  display: flex;
+  justify-content: space-between;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 18px;
+  align-items: center;
+}
+
+.submission-container:hover {
+  cursor: pointer;
+}
+
+.submission-container:hover .sub-btn {
+  opacity: 100%;
+}
+.submission-container:hover .submission-text-content {
+  color: var(--blue-text);
+}
+
+.submission-text-content {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.submission-sub-text-content {
+  font-size: 0.8rem;
+  color: gray;
+  padding-top: 5px;
+}
+
+.submission-btn {
+  display: flex;
+  gap: 8px;
+}
+
+.svg-icon {
+  background-color: white;
+  border: 0px;
+  cursor: pointer;
+  /* padding: 12px; */
+  stroke: rgba(0, 0, 0, 0.5);
+}
+
+.sub-btn {
+  background-color: white;
+  border: 0px;
+  opacity: 0%;
+  transition: opacity 0.3s ease;
+}
+
+.edit-btn:hover {
+  stroke: var(--green-edit);
+}
+.del-btn:hover {
+  stroke: var(--red-delete);
+}
+
+.s-e-c-container {
+  display: flex;
+  gap: 12px;
 }

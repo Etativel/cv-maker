@@ -149,7 +149,9 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
         </button>
       </div>
 
-      <button type="submit">{initialValues ? "Save" : "Add"}</button>
+      <button className="form-add-btn" type="submit">
+        {initialValues ? "Save" : "Add"}
+      </button>
       {onCancel && (
         <button type="button" onClick={onCancel}>
           Cancel

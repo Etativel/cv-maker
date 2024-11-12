@@ -30,7 +30,7 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
     <form className="skill-form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="skill-name-input">
-          <strong>Skill Name</strong>
+          <strong className="block-title ">Skill Name</strong>
         </label>
         <input
           type="text"
@@ -40,12 +40,12 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
           value={formValues.skillName}
           onChange={handleChange}
           required
-          className="skill-name-input skill-input"
+          className="skill-name-input skill-input b-t-skill"
         />
       </div>
       <div className="form-group">
         <label htmlFor="skill-detail-input">
-          <strong>Skill Details</strong>
+          <strong className="block-title ">Skill Details</strong>
         </label>
         <textarea
           //   type="text-area"
@@ -55,10 +55,12 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
           value={formValues.skillDetails}
           onChange={handleChange}
           required
-          className="skill-detail-input skill-input"
+          className="skill-detail-input skill-input s-input"
         />
       </div>
-      <button type="submit">{initialValues ? "Save" : "Add"}</button>
+      <button className="form-add-btn" type="submit">
+        {initialValues ? "Save" : "Add"}
+      </button>
       {onCancel && (
         <button type="button" onClick={onCancel}>
           Cancel

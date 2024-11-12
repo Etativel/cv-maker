@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import removeIcon from "../../assets/icons/recycle-bin.png";
+import { formatDate } from "../../utils/FormatDate";
+import { EditIcon, TrashBinIcon } from "../../assets/icons/svgModule";
 function ExperienceForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
     initialValues || {
@@ -75,6 +77,23 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
               className="position-input experience-input"
             />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="company-input">
+              <strong>Company Name</strong>
+            </label>
+            <input
+              type="text"
+              id="company-input"
+              name="company"
+              placeholder="Enter company name"
+              value={formValues.company}
+              onChange={handleChange}
+              required
+              className="company-input experience-input"
+            />
+          </div>
+
           <div className="form-group">
             <label htmlFor="experience-start-date-input">
               <strong>Start Date</strong>
@@ -91,20 +110,36 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
         </div>
         <div className="right-field">
           <div className="form-group">
-            <label htmlFor="company-input">
-              <strong>Company Name</strong>
+            <label htmlFor="city-input">
+              <strong>City</strong>
             </label>
             <input
               type="text"
-              id="company-input"
-              name="company"
-              placeholder="Enter company name"
-              value={formValues.company}
+              id="city-input"
+              name="companyCity"
+              placeholder="Enter company city"
+              value={formValues.companyCity}
               onChange={handleChange}
               required
-              className="company-input experience-input"
+              className="city-input experience-input"
             />
           </div>
+          <div className="form-group">
+            <label htmlFor="country-input">
+              <strong>Country</strong>
+            </label>
+            <input
+              type="text"
+              id="country-input"
+              name="companyCountry"
+              placeholder="Enter company country"
+              value={formValues.companyCountry}
+              onChange={handleChange}
+              required
+              className="country-input experience-input"
+            />
+          </div>
+
           <div className="form-group">
             <label htmlFor="experience-end-date-input">
               <strong>End Date</strong>
@@ -153,12 +188,16 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
         </button>
       </div>
 
-      <button type="submit">{initialValues ? "Save" : "Add"}</button>
-      {onCancel && (
-        <button type="button" onClick={onCancel}>
-          Cancel
+      <div className="s-e-c-container">
+        <button className="form-add-btn" type="submit">
+          {initialValues ? "Save" : "Add"}
         </button>
-      )}
+        {onCancel && (
+          <button className="form-cancel-btn" type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 }
@@ -207,32 +246,30 @@ export default function ExperienceSection({ experience, setExperience }) {
               onCancel={handleCancelEdit}
             />
           ) : (
-            <>
-              <p>
-                <strong>Position:</strong> {exp.position}
-              </p>
-              <p>
-                <strong>Company:</strong> {exp.company}
-              </p>
-              <p>
-                <strong>Start Date:</strong> {exp.experienceStartDate}
-              </p>
-              <p>
-                <strong>End Date:</strong> {exp.experienceEndDate}
-              </p>
-              <p>
-                <strong>Experience Details:</strong>
-                <ul>
-                  {exp.experienceDetails.map((detail, idx) => (
-                    <li className="exp-li" key={idx}>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </p>
-              <button onClick={() => handleEdit(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-            </>
+            <div className="submission-container">
+              <div className="s-c-top">
+                <p className="submission-text-content">
+                  {exp.position}
+                  {" at "}
+                  {exp.company}
+                </p>
+                <p className="submission-sub-text-content">
+                  {formatDate(exp.experienceStartDate)} {" - "}{" "}
+                  {formatDate(exp.experienceEndDate)}
+                </p>
+              </div>
+              <div className="submission-btn">
+                <button className="sub-btn " onClick={() => handleEdit(index)}>
+                  <EditIcon />
+                </button>
+                <button
+                  className="sub-btn "
+                  onClick={() => handleDelete(index)}
+                >
+                  <TrashBinIcon />
+                </button>
+              </div>
+            </div>
           )}
         </div>
       ))}

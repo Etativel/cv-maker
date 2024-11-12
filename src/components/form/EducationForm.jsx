@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { formatDate } from "../../utils/FormatDate";
 
 function EducationForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
@@ -112,6 +113,7 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
               className="edu-country-input education-input"
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="edu-end-date-input">
               <strong>End Date</strong>
@@ -127,13 +129,16 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
           </div>
         </div>
       </div>
-
-      <button type="submit">{initialValues ? "Save" : "Add"}</button>
-      {onCancel && (
-        <button type="button" onClick={onCancel}>
-          Cancel
+      <div className="s-e-c-container">
+        <button className="form-add-btn" type="submit">
+          {initialValues ? "Save" : "Add"}
         </button>
-      )}
+        {onCancel && (
+          <button className="form-cancel-btn" type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 }
@@ -181,28 +186,30 @@ export default function EducationSection({ education, setEducation }) {
               onCancel={handleCancelEdit}
             />
           ) : (
-            <>
-              <p>
-                <strong>School:</strong> {edu.school}
-              </p>
-              <p>
-                <strong>Degree:</strong> {edu.degree}
-              </p>
-              <p>
-                <strong>City:</strong> {edu.eduCity}
-              </p>
-              <p>
-                <strong>Country:</strong> {edu.eduCountry}
-              </p>
-              <p>
-                <strong>Start Date:</strong> {edu.eduStartDate}
-              </p>
-              <p>
-                <strong>End Date:</strong> {edu.eduEndDate}
-              </p>
-              <button onClick={() => handleEdit(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-            </>
+            <div className="submission-container">
+              <div className="s-c-top">
+                <p className="submission-text-content">
+                  {edu.degree}
+                  {" at "}
+                  {edu.school}
+                </p>
+                <p className="submission-sub-text-content">
+                  {formatDate(edu.eduStartDate)} {" - "}{" "}
+                  {formatDate(edu.eduEndDate)}
+                </p>
+              </div>
+              <div className="submission-btn">
+                <button className="sub-btn " onClick={() => handleEdit(index)}>
+                  <EditIcon />
+                </button>
+                <button
+                  className="sub-btn "
+                  onClick={() => handleDelete(index)}
+                >
+                  <TrashBinIcon />
+                </button>
+              </div>
+            </div>
           )}
         </div>
       ))}
@@ -211,3 +218,5 @@ export default function EducationSection({ education, setEducation }) {
     </div>
   );
 }
+
+import { EditIcon, TrashBinIcon } from "../../assets/icons/svgModule";
