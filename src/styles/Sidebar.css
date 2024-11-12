@@ -5,9 +5,9 @@
 
 .sidebar {
   /* background-color: #000000; */
-  background-color: black;
+  background-color: #e8f4fe;
   /* border-right: 1px solid white; */
-  flex-grow: 1;
+  flex-grow: 4;
   /* min-width: 600px; */
   /* display: none; */
   height: fit-content;
@@ -31,8 +31,9 @@
 .education-details-container,
 .personal-details-container {
   background-color: white;
-  margin: 32px;
-  padding: 12px;
+  /* max-width: 32rem; */
+  margin: 32px 64px;
+  padding: 32px;
   border-radius: 6px;
   font-family: Arial, Helvetica, sans-serif;
   /* width: fit-content; */
@@ -87,16 +88,25 @@
 .experience-input,
 .education-input,
 .personal-input {
+  cursor: pointer;
   padding: 8px;
   border-radius: 6px;
   border: none;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
+  background-color: #e8f0fe;
+  outline-color: transparent;
+  outline-width: 2px;
+  outline-style: solid;
+  transition: outline-color 0.3s ease, box-shadow 0.3s ease;
 }
 .project-input:focus,
 .experience-input:focus,
 .education-input:focus,
 .personal-input:focus {
-  outline-color: blue;
+  outline-color: #4cc9fe;
+  outline-width: 2px;
+  outline-style: solid;
+  box-shadow: 0 0 5px rgba(76, 201, 254, 0.6);
 }
 
 label {
@@ -115,6 +125,10 @@ label {
 .profile-form > label {
   display: flex;
   flex-direction: column;
+}
+
+.form-group > label {
+  cursor: pointer;
 }
 
 /* Experience */

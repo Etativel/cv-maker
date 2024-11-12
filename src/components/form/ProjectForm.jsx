@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
+
 import { useState } from "react";
 
 function ProjectForm({ initialValues, onSubmit, onCancel }) {
@@ -57,7 +56,7 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
     <form className="project-form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="project-name-input">
-          <strong>Position Title</strong>
+          <strong>Project Name</strong>
         </label>
         <input
           type="text"
