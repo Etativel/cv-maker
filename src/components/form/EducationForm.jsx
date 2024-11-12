@@ -36,91 +36,98 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
 
   return (
     <form className="profile-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="school-input">
-          <strong>School</strong>
-        </label>
-        <input
-          type="text"
-          id="school-input"
-          name="school"
-          placeholder="Enter school / university"
-          value={formValues.school}
-          onChange={handleChange}
-          required
-          className="school-input education-input"
-        />
+      <div className="top-field">
+        <div className="left-field">
+          <div className="form-group">
+            <label htmlFor="school-input">
+              <strong>School</strong>
+            </label>
+            <input
+              type="text"
+              id="school-input"
+              name="school"
+              placeholder="Enter school / university"
+              value={formValues.school}
+              onChange={handleChange}
+              required
+              className="school-input education-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="degree-input">
+              <strong>Degree</strong>
+            </label>
+            <input
+              type="text"
+              id="degree-input"
+              name="degree"
+              placeholder="Enter degree / Field of study"
+              value={formValues.degree}
+              onChange={handleChange}
+              required
+              className="degree-input education-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="edu-start-date-input">
+              <strong>Start Date</strong>
+            </label>
+            <input
+              type="date"
+              id="edu-start-date-input"
+              name="eduStartDate"
+              value={formValues.eduStartDate}
+              onChange={handleChange}
+              className="edu-start-date-input education-input"
+            />
+          </div>
+        </div>
+        <div className="right-field">
+          <div className="form-group">
+            <label htmlFor="edu-city-input">
+              <strong>City</strong>
+            </label>
+            <input
+              type="text"
+              id="edu-city-input"
+              name="eduCity"
+              placeholder="Enter city"
+              value={formValues.eduCity}
+              onChange={handleChange}
+              required
+              className="edu-city-input education-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="edu-country-input">
+              <strong>Country</strong>
+            </label>
+            <input
+              type="text"
+              id="edu-country-input"
+              name="eduCountry"
+              placeholder="Enter country"
+              value={formValues.eduCountry}
+              onChange={handleChange}
+              className="edu-country-input education-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="edu-end-date-input">
+              <strong>End Date</strong>
+            </label>
+            <input
+              type="date"
+              id="edu-end-date-input"
+              name="eduEndDate"
+              value={formValues.eduEndDate}
+              onChange={handleChange}
+              className="edu-end-date-input education-input"
+            />
+          </div>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="degree-input">
-          <strong>Degree</strong>
-        </label>
-        <input
-          type="text"
-          id="degree-input"
-          name="degree"
-          placeholder="Enter degree / Field of study"
-          value={formValues.degree}
-          onChange={handleChange}
-          required
-          className="degree-input education-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="edu-city-input">
-          <strong>City</strong>
-        </label>
-        <input
-          type="text"
-          id="edu-city-input"
-          name="eduCity"
-          placeholder="Enter city"
-          value={formValues.eduCity}
-          onChange={handleChange}
-          required
-          className="edu-city-input education-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="edu-country-input">
-          <strong>Country</strong>
-        </label>
-        <input
-          type="text"
-          id="edu-country-input"
-          name="eduCountry"
-          placeholder="Enter country"
-          value={formValues.eduCountry}
-          onChange={handleChange}
-          className="edu-country-input education-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="edu-start-date-input">
-          <strong>Start Date</strong>
-        </label>
-        <input
-          type="date"
-          id="edu-start-date-input"
-          name="eduStartDate"
-          value={formValues.eduStartDate}
-          onChange={handleChange}
-          className="edu-start-date-input education-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="edu-end-date-input">
-          <strong>End Date</strong>
-        </label>
-        <input
-          type="date"
-          id="edu-end-date-input"
-          name="eduEndDate"
-          value={formValues.eduEndDate}
-          onChange={handleChange}
-          className="edu-end-date-input education-input"
-        />
-      </div>
+
       <button type="submit">{initialValues ? "Save" : "Add"}</button>
       {onCancel && (
         <button type="button" onClick={onCancel}>
@@ -160,7 +167,7 @@ export default function EducationSection({ education, setEducation }) {
   return (
     <div className="education-details-container">
       <div className="education-head">
-        <p className="education-detail-h1">Education Details</p>
+        <p className="education-detail-h1">Education</p>
       </div>
 
       {education.map((edu, index) => (

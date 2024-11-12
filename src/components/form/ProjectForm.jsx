@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import removeIcon from "../../assets/icons/recycle-bin.png";
 
 import { useState } from "react";
 
@@ -54,84 +55,97 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
 
   return (
     <form className="project-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="project-name-input">
-          <strong>Project Name</strong>
-        </label>
-        <input
-          type="text"
-          id="project-name-input"
-          name="projectName"
-          placeholder="Enter project name"
-          value={formValues.projectName}
-          onChange={handleChange}
-          required
-          className="project-name-input project-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="project-stack-input">
-          <strong>Project Stack</strong>
-        </label>
-        <input
-          type="text"
-          id="project-stack-input"
-          name="projectStack"
-          placeholder="Enter project stacks"
-          value={formValues.projectStack}
-          onChange={handleChange}
-          required
-          className="project-stack-input project-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="project-start-date-input">
-          <strong>Start Date</strong>
-        </label>
-        <input
-          type="date"
-          id="project-start-date-input"
-          name="projectStartDate"
-          value={formValues.projectStartDate}
-          onChange={handleChange}
-          className="project-start-date-input project-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="project-end-date-input">
-          <strong>End Date</strong>
-        </label>
-        <input
-          type="date"
-          id="project-end-date-input"
-          name="projectEndDate"
-          value={formValues.projectEndDate}
-          onChange={handleChange}
-          className="project-end-date-input project-input"
-        />
+      <div className="top-field">
+        <div className="left-field">
+          <div className="form-group">
+            <label htmlFor="project-name-input">
+              <strong>Project Name</strong>
+            </label>
+            <input
+              type="text"
+              id="project-name-input"
+              name="projectName"
+              placeholder="Enter project name"
+              value={formValues.projectName}
+              onChange={handleChange}
+              required
+              className="project-name-input project-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="project-start-date-input">
+              <strong>Start Date</strong>
+            </label>
+            <input
+              type="date"
+              id="project-start-date-input"
+              name="projectStartDate"
+              value={formValues.projectStartDate}
+              onChange={handleChange}
+              className="project-start-date-input project-input"
+            />
+          </div>
+        </div>
+        <div className="right-field">
+          <div className="form-group">
+            <label htmlFor="project-stack-input">
+              <strong>Project Stack</strong>
+            </label>
+            <input
+              type="text"
+              id="project-stack-input"
+              name="projectStack"
+              placeholder="Enter project stacks"
+              value={formValues.projectStack}
+              onChange={handleChange}
+              required
+              className="project-stack-input project-input"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="project-end-date-input">
+              <strong>End Date</strong>
+            </label>
+            <input
+              type="date"
+              id="project-end-date-input"
+              name="projectEndDate"
+              value={formValues.projectEndDate}
+              onChange={handleChange}
+              className="project-end-date-input project-input"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="project-details-list">
         <label>
-          <strong>Project Details</strong>
+          <strong className="block-title">Project Details</strong>
         </label>
         {formValues.projectDetails.map((detail, index) => (
           <div key={index} className="project-detail-item">
             <textarea
+              className="e-d-input"
               value={detail}
               onChange={(e) => handleProjectDetailChange(index, e.target.value)}
-              placeholder={`Enter project detail ${index + 1}`}
+              placeholder={`Detail ${index + 1}`}
             />
             <button
               type="button"
+              className="e-d-remove-btn"
               onClick={() => handleRemoveProjectDetail(index)}
             >
-              Remove
+              <img className="remove-icon" src={removeIcon} alt="" />
             </button>
           </div>
         ))}
-        <button type="button" onClick={handleAddProjectDetails}>
-          Add Project Detail
+        <button
+          type="button"
+          className="add-btn-list"
+          onClick={handleAddProjectDetails}
+        >
+          + Add Details
         </button>
       </div>
 

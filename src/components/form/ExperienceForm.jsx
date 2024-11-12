@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-
+import removeIcon from "../../assets/icons/recycle-bin.png";
 function ExperienceForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
     initialValues || {
@@ -58,86 +58,98 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
 
   return (
     <form className="experience-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="position-input">
-          <strong>Position Title</strong>
-        </label>
-        <input
-          type="text"
-          id="position-input"
-          name="position"
-          placeholder="Enter position title"
-          value={formValues.position}
-          onChange={handleChange}
-          required
-          className="position-input experience-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="company-input">
-          <strong>Company Name</strong>
-        </label>
-        <input
-          type="text"
-          id="company-input"
-          name="company"
-          placeholder="Enter company name"
-          value={formValues.company}
-          onChange={handleChange}
-          required
-          className="company-input experience-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="experience-start-date-input">
-          <strong>Start Date</strong>
-        </label>
-        <input
-          type="date"
-          id="experience-start-date-input"
-          name="experienceStartDate"
-          value={formValues.experienceStartDate}
-          onChange={handleChange}
-          className="experience-start-date-input experience-input"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="experience-end-date-input">
-          <strong>End Date</strong>
-        </label>
-        <input
-          type="date"
-          id="experience-end-date-input"
-          name="experienceEndDate"
-          value={formValues.experienceEndDate}
-          onChange={handleChange}
-          className="experience-end-date-input experience-input"
-        />
+      <div className="top-field">
+        <div className="left-field">
+          <div className="form-group">
+            <label htmlFor="position-input">
+              <strong>Position Title</strong>
+            </label>
+            <input
+              type="text"
+              id="position-input"
+              name="position"
+              placeholder="Enter position title"
+              value={formValues.position}
+              onChange={handleChange}
+              required
+              className="position-input experience-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="experience-start-date-input">
+              <strong>Start Date</strong>
+            </label>
+            <input
+              type="date"
+              id="experience-start-date-input"
+              name="experienceStartDate"
+              value={formValues.experienceStartDate}
+              onChange={handleChange}
+              className="experience-start-date-input experience-input"
+            />
+          </div>
+        </div>
+        <div className="right-field">
+          <div className="form-group">
+            <label htmlFor="company-input">
+              <strong>Company Name</strong>
+            </label>
+            <input
+              type="text"
+              id="company-input"
+              name="company"
+              placeholder="Enter company name"
+              value={formValues.company}
+              onChange={handleChange}
+              required
+              className="company-input experience-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="experience-end-date-input">
+              <strong>End Date</strong>
+            </label>
+            <input
+              type="date"
+              id="experience-end-date-input"
+              name="experienceEndDate"
+              value={formValues.experienceEndDate}
+              onChange={handleChange}
+              className="experience-end-date-input experience-input"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="experience-details-list">
         <label>
-          <strong>Experience Details</strong>
+          <strong className="block-title">Experience Details</strong>
         </label>
         {formValues.experienceDetails.map((detail, index) => (
           <div key={index} className="experience-detail-item">
             <textarea
+              className="e-d-input"
               value={detail}
               onChange={(e) =>
                 handleExperienceDetailChange(index, e.target.value)
               }
-              placeholder={`Enter experience detail ${index + 1}`}
+              placeholder={`Detail ${index + 1}`}
             />
             <button
               type="button"
+              className="e-d-remove-btn"
               onClick={() => handleRemoveExperienceDetail(index)}
             >
-              Remove
+              <img className="remove-icon" src={removeIcon} alt="" />
             </button>
           </div>
         ))}
-        <button type="button" onClick={handleAddExperienceDetail}>
-          Add Experience Detail
+        <button
+          type="button"
+          className="add-btn-list"
+          onClick={handleAddExperienceDetail}
+        >
+          + Add Details
         </button>
       </div>
 
@@ -181,7 +193,7 @@ export default function ExperienceSection({ experience, setExperience }) {
   return (
     <div className="experience-details-container">
       <div className="experience-head">
-        <p className="experience-detail-h1">Experience Details</p>
+        <p className="experience-detail-h1">Experience</p>
       </div>
 
       {experience.map((exp, index) => (

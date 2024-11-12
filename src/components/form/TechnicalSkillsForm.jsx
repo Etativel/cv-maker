@@ -47,8 +47,8 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
         <label htmlFor="skill-detail-input">
           <strong>Skill Details</strong>
         </label>
-        <input
-          type="text-area"
+        <textarea
+          //   type="text-area"
           id="skill-detail-input"
           name="skillDetails"
           placeholder="Enter skill details"
@@ -77,6 +77,7 @@ export default function SkillSection({ skills, setSkills }) {
   const updateSkill = (updatedSkill, index) => {
     const updatedList = [...skills];
     updatedList[index] = updatedSkill;
+    setSkills(updatedList);
     setEditIndex(null);
   };
   const handleEdit = (index) => {
@@ -85,7 +86,7 @@ export default function SkillSection({ skills, setSkills }) {
 
   const handleDelete = (index) => {
     const updatedSkill = skills.filter((_, i) => i !== index);
-    setSkills([updatedSkill]);
+    setSkills(updatedSkill);
   };
 
   const handleCancelEdit = () => {
@@ -102,7 +103,7 @@ export default function SkillSection({ skills, setSkills }) {
             {editIndex === index ? (
               <SkillForm
                 initialValues={skill}
-                onsSubmit={(updatedSkill) => updateSkill(updatedSkill, index)}
+                onSubmit={(updatedSkill) => updateSkill(updatedSkill, index)}
                 onCancel={handleCancelEdit}
               />
             ) : (
@@ -112,7 +113,7 @@ export default function SkillSection({ skills, setSkills }) {
                   {skill.skillName}
                 </p>
                 <p>
-                  <strong>Skill Name:</strong>
+                  <strong>Skill Details:</strong>
                   {skill.skillDetails}
                 </p>
                 <button onClick={() => handleEdit(index)}>Edit</button>

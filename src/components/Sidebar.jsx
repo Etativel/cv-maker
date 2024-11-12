@@ -7,6 +7,8 @@ import EducationSection from "./form/EducationForm";
 import ExperienceSection from "./form/ExperienceForm";
 import ProjectsSection from "./form/ProjectForm";
 import { downloadPDF } from "../utils/DownloadPdf";
+import SkillSection from "./form/TechnicalSkillsForm";
+import SidebarHead from "./form/SidebarHead";
 
 export default function Sidebar({
   profile,
@@ -24,6 +26,7 @@ export default function Sidebar({
 }) {
   return (
     <div className="sidebar">
+      <SidebarHead />
       <ProfileForm profile={profile} setProfile={setProfile} />
       <EducationSection education={education} setEducation={setEducation} />
       <ExperienceSection
@@ -31,6 +34,7 @@ export default function Sidebar({
         setExperience={setExperience}
       />
       <ProjectsSection projects={projects} setProjects={setProjects} />
+      <SkillSection skills={skills} setSkills={setSkills} />
       <button onClick={downloadPDF}>Download PDF</button>
     </div>
   );

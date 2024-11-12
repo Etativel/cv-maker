@@ -1,8 +1,11 @@
-/* :root {
-  --f-11pt: 14.67px;
-  --f-12pt: 16px;
-  --f-14pt: 18.67px;
-} */
+:root {
+  --blue: #1a91f0;
+}
+
+.remove-icon {
+  height: 24px;
+  width: 24px;
+}
 
 .hidden {
   visibility: hidden;
@@ -23,11 +26,12 @@
   height: 100vh;
 
   width: fit-content;
-  flex-grow: 3;
+  flex-grow: 1;
   /* background-color: red; */
   overflow-y: auto;
   overflow-x: auto;
-  background-color: white;
+  background-color: black;
+  /* background-color: white; */
 
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
@@ -119,7 +123,6 @@ a {
   text-align: end;
 }
 
-/* Experience */
 .skill-point,
 .proj-point,
 .exp-point {
