@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import removeIcon from "../../assets/icons/recycle-bin.png";
-
+import { EditIcon, TrashBinIcon } from "../../assets/icons/svgModule";
 import { useState } from "react";
+import { formatDate } from "../../utils/Formatter";
 
 function ProjectForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
@@ -82,6 +83,7 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
               name="projectStartDate"
               value={formValues.projectStartDate}
               onChange={handleChange}
+              required
               className="project-start-date-input project-input"
             />
           </div>
@@ -113,6 +115,7 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
               name="projectEndDate"
               value={formValues.projectEndDate}
               onChange={handleChange}
+              required
               className="project-end-date-input project-input"
             />
           </div>
@@ -149,14 +152,16 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
         </button>
       </div>
 
-      <button className="form-add-btn" type="submit">
-        {initialValues ? "Save" : "Add"}
-      </button>
-      {onCancel && (
-        <button type="button" onClick={onCancel}>
-          Cancel
+      <div className="s-e-c-container">
+        <button className="form-add-btn" type="submit">
+          {initialValues ? "Save" : "Add"}
         </button>
-      )}
+        {onCancel && (
+          <button className="form-cancel-btn" type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 }
@@ -205,32 +210,30 @@ export default function ProjectsSection({ projects, setProjects }) {
               onCancel={handleCancelEdit}
             />
           ) : (
-            <>
-              <p>
-                <strong>Project Name:</strong> {proj.projectName}
-              </p>
-              <p>
-                <strong>Project Stack:</strong> {proj.projectStack}
-              </p>
-              <p>
-                <strong>Start Date:</strong> {proj.projectStartDate}
-              </p>
-              <p>
-                <strong>End Date:</strong> {proj.projectEndDate}
-              </p>
-              <p>
-                <strong>Project Details:</strong>
-                <ul>
-                  {proj.projectDetails.map((detail, idx) => (
-                    <li className="exp-li" key={idx}>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </p>
-              <button onClick={() => handleEdit(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-            </>
+            <div className="submission-container">
+              <div className="s-c-top">
+                <p className="submission-text-content">
+                  {proj.projectName}
+                  {" with "}
+                  {proj.projectStack}
+                </p>
+                <p className="submission-sub-text-content">
+                  {formatDate(proj.projectStartDate)} {" - "}{" "}
+                  {formatDate(proj.projectEndDate)}
+                </p>
+              </div>
+              <div className="submission-btn">
+                <button className="sub-btn " onClick={() => handleEdit(index)}>
+                  <EditIcon />
+                </button>
+                <button
+                  className="sub-btn "
+                  onClick={() => handleDelete(index)}
+                >
+                  <TrashBinIcon />
+                </button>
+              </div>
+            </div>
           )}
         </div>
       ))}

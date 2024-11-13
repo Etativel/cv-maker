@@ -7,7 +7,6 @@ function formatDate(dateString) {
 
 function getGitHubUsername(link) {
   const githubRegex = /github\.com\/([^/?#\s]+)/;
-
   const match = link.match(githubRegex);
 
   if (match) {

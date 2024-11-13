@@ -133,6 +133,7 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
         <button className="form-add-btn" type="submit">
           {initialValues ? "Save" : "Add"}
         </button>
+
         {onCancel && (
           <button className="form-cancel-btn" type="button" onClick={onCancel}>
             Cancel

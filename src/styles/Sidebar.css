@@ -290,6 +290,12 @@ label {
 }
 
 /* General */
+
+.hide-btn {
+  display: none !important;
+}
+
+.form-hide-btn,
 .form-cancel-btn,
 .form-add-btn {
   display: block;
@@ -302,6 +308,12 @@ label {
   cursor: pointer;
 }
 
+.form-hide-btn {
+  background-color: var(--green-edit);
+  color: white;
+  border: solid 2px var(--green-edit);
+}
+
 .form-cancel-btn {
   background-color: var(--red-delete);
   color: white;
@@ -311,6 +323,12 @@ label {
   background-color: var(--blue-text);
   color: white;
   border: solid 2px var(--blue-text);
+}
+
+.form-hide-btn:hover {
+  background-color: white;
+  color: var(--green-edit);
+  border: solid 2px var(--green-edit);
 }
 
 .form-cancel-btn:hover {
@@ -350,6 +368,9 @@ label {
 .submission-text-content {
   font-size: 0.8rem;
   font-weight: 600;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* max-width: 490px; */
 }
 
 .submission-sub-text-content {
