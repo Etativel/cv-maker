@@ -1,14 +1,17 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Canvas from "./components/Canvas";
 import { useState } from "react";
+import { jakeRyan, emilyClarke } from "./utils/DummyData";
+const dummy = emilyClarke;
 
 function App() {
-  const [profile, setProfile] = useState({});
-  const [education, setEducation] = useState([]);
-  const [experience, setExperience] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [skills, setSkills] = useState([]);
+  const [profile, setProfile] = useState(dummy.personal);
+  const [education, setEducation] = useState(dummy.education);
+  const [experience, setExperience] = useState(dummy.experience);
+  const [projects, setProjects] = useState(dummy.projects);
+  const [skills, setSkills] = useState(dummy.skills);
   const [font, setFont] = useState("Times New Roman");
 
   return (

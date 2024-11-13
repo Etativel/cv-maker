@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-
+import { TrashBinIcon, EditIcon } from "../../assets/icons/svgModule";
 function SkillForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
     initialValues || {
@@ -57,14 +57,16 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
           className="skill-detail-input skill-input s-input"
         />
       </div>
-      <button className="form-add-btn" type="submit">
-        {initialValues ? "Save" : "Add"}
-      </button>
-      {onCancel && (
-        <button type="button" onClick={onCancel}>
-          Cancel
+      <div className="s-e-c-container">
+        <button className="form-add-btn" type="submit">
+          {initialValues ? "Save" : "Add"}
         </button>
-      )}
+        {onCancel && (
+          <button className="form-cancel-btn" type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 }
@@ -108,18 +110,28 @@ export default function SkillSection({ skills, setSkills }) {
                 onCancel={handleCancelEdit}
               />
             ) : (
-              <>
-                <p>
-                  <strong>Skill Name:</strong>
-                  {skill.skillName}
-                </p>
-                <p>
-                  <strong>Skill Details:</strong>
-                  {skill.skillDetails}
-                </p>
-                <button onClick={() => handleEdit(index)}>Edit</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
-              </>
+              <div className="submission-container">
+                <div className="s-c-top">
+                  <p className="submission-text-content">{skill.skillName}</p>
+                  <p className="submission-sub-text-content">
+                    {skill.skillDetails}
+                  </p>
+                </div>
+                <div className="submission-btn">
+                  <button
+                    className="sub-btn "
+                    onClick={() => handleEdit(index)}
+                  >
+                    <EditIcon />
+                  </button>
+                  <button
+                    className="sub-btn "
+                    onClick={() => handleDelete(index)}
+                  >
+                    <TrashBinIcon />
+                  </button>
+                </div>
+              </div>
             )}
           </div>
         ))}
