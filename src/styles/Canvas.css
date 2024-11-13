@@ -20,12 +20,12 @@
   justify-content: start;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: fit-content;
   flex-grow: 1;
   overflow-y: auto;
-  overflow-x: auto;
-  background-color: black;
+  /* overflow-x: auto; */
+  /* background-color: black; */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -38,7 +38,7 @@
   height: 29.7cm;
   /* margin-top: 24px; */
   margin-bottom: 24px;
-  padding-bottom: 64px;
+  padding-bottom: 1200px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -72,6 +72,7 @@ a {
 
 .profile-li {
   font-size: 14.666px;
+  text-decoration: none;
 }
 
 /* Education */
@@ -99,6 +100,10 @@ a {
   padding-bottom: 3px;
   padding-top: 3px;
   display: flex;
+}
+
+.skill-content {
+  flex-direction: column;
 }
 
 .skill-info,

@@ -1,7 +1,8 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const downloadPDF = () => {
+const downloadPDF = (fileName) => {
+  const onSaveFileName = fileName ? fileName : "CV-Builder";
   const paperElement = document.querySelector(".paper");
 
   html2canvas(paperElement, {
@@ -32,7 +33,7 @@ const downloadPDF = () => {
     }
 
     pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight, "", "NONE");
-    pdf.save("CV_high_quality.pdf");
+    pdf.save(`${onSaveFileName}.pdf`);
   });
 };
 

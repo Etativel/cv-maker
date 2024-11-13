@@ -2,17 +2,45 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Canvas from "./components/Canvas";
-import { useState } from "react";
-import { jakeRyan, emilyClarke } from "./utils/DummyData";
-const dummy = jakeRyan;
+import { useState, useEffect } from "react";
+import { jakeRyan } from "./utils/DummyData";
 
 function App() {
-  const [profile, setProfile] = useState(dummy.personal);
-  const [education, setEducation] = useState(dummy.education);
-  const [experience, setExperience] = useState(dummy.experience);
-  const [projects, setProjects] = useState(dummy.projects);
-  const [skills, setSkills] = useState(dummy.skills);
+  const [data, setData] = useState([]);
+  const [fileName, setFileName] = useState("untitled");
+  const [profile, setProfile] = useState("");
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [font, setFont] = useState("Times New Roman");
+
+  useEffect(() => {
+    if (data) {
+      setProfile(data.personal || "");
+      setEducation(data.education || []);
+      setExperience(data.experience || []);
+      setProjects(data.projects || []);
+      setSkills(data.skills || []);
+    }
+  }, [data]);
+
+  function onDataTemplate(dummyData) {
+    console.log("hello");
+    console.log(dummyData);
+    setData(dummyData);
+  }
+
+  function clearState() {
+    console.log("cleared");
+    setFileName("untitled");
+    setData({});
+    setProfile("");
+    setEducation([]);
+    setExperience([]);
+    setProjects([]);
+    setSkills([]);
+  }
 
   return (
     <div className="container">
@@ -24,12 +52,16 @@ function App() {
         projects={projects}
         skills={skills}
         font={font}
+        fileName={fileName}
         setProfile={setProfile}
         setEducation={setEducation}
         setExperience={setExperience}
         setProjects={setProjects}
         setSkills={setSkills}
         setFont={setFont}
+        setFileName={setFileName}
+        clearState={clearState}
+        setData={onDataTemplate}
       />
 
       <Canvas

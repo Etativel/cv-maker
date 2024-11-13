@@ -104,6 +104,7 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
               name="experienceStartDate"
               value={formValues.experienceStartDate}
               onChange={handleChange}
+              required
               className="experience-start-date-input experience-input"
             />
           </div>
@@ -150,6 +151,7 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
               name="experienceEndDate"
               value={formValues.experienceEndDate}
               onChange={handleChange}
+              required
               className="experience-end-date-input experience-input"
             />
           </div>

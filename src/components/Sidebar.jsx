@@ -17,16 +17,25 @@ export default function Sidebar({
   projects,
   skills,
   font,
+  fileName,
   setProfile,
   setEducation,
   setExperience,
   setProjects,
   setSkills,
   setFont,
+  setFileName,
+  clearState,
+  setData,
 }) {
   return (
     <div className="sidebar">
-      <SidebarHead />
+      <SidebarHead
+        fileName={fileName}
+        setFileName={setFileName}
+        clearState={clearState}
+        setData={setData}
+      />
       <ProfileForm profile={profile} setProfile={setProfile} />
       <EducationSection education={education} setEducation={setEducation} />
       <ExperienceSection
@@ -35,7 +44,6 @@ export default function Sidebar({
       />
       <ProjectsSection projects={projects} setProjects={setProjects} />
       <SkillSection skills={skills} setSkills={setSkills} />
-      <button onClick={downloadPDF}>Download PDF</button>
     </div>
   );
 }

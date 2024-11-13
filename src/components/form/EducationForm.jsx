@@ -79,6 +79,7 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
               name="eduStartDate"
               value={formValues.eduStartDate}
               onChange={handleChange}
+              required
               className="edu-start-date-input education-input"
             />
           </div>
@@ -124,6 +125,7 @@ function EducationForm({ initialValues, onSubmit, onCancel }) {
               name="eduEndDate"
               value={formValues.eduEndDate}
               onChange={handleChange}
+              required
               className="edu-end-date-input education-input"
             />
           </div>

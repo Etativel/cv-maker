@@ -117,40 +117,52 @@ const jakeRyan = {
   ],
 };
 
-const emilyClarke = {
+const alexSmith = {
   personal: {
-    name: "Emily Clarke",
+    name: "Alex Smith",
     number: "123 456 789",
-    email: "emilyclarke@example.com",
-    linkedin: "linkedin.com/in/emilyclarke",
-    github: "github.com/EmilyC",
+    email: "alexsmith@gmail.com",
+    linkedin: "linkedin.com/in/alex",
+    github: "github.com/alexsmith",
   },
   education: [
     {
-      school: "Stanford University",
-      degree: "Bachelor of Science in Computer Engineering",
-      eduCity: "Stanford",
+      school: "University of California",
+      degree: "Bachelor of Science in Software Engineering",
+      eduCity: "Los Angeles",
       eduCountry: "CA",
       eduStartDate: "2015-09-01",
       eduEndDate: "2019-06-01",
+      eduDetails: [
+        "Focus on full-stack web development with emphasis on JavaScript frameworks like React and Node.js.",
+        "Completed a capstone project that developed a fully functioning e-commerce platform using MERN stack (MongoDB, Express.js, React, Node.js).",
+        "Studied software engineering methodologies, including Agile and Scrum frameworks, used for collaborative and iterative development processes.",
+        "Engaged in hands-on coding bootcamps that contributed to rapid project delivery and high-quality code under tight deadlines.",
+      ],
     },
     {
       school: "City College of San Francisco",
-      degree: "Associate's in Computer Science",
+      degree: "Associate’s in Computer Science",
       eduCity: "San Francisco",
       eduCountry: "CA",
-      eduStartDate: "2013-08-01",
-      eduEndDate: "2015-05-01",
+      eduStartDate: "2013-09-01",
+      eduEndDate: "2015-06-01",
+      eduDetails: [
+        "Fundamentals of computer science with a focus on problem-solving using algorithms and data structures.",
+        "Learned basic web development with HTML, CSS, and JavaScript, alongside introductory courses on databases and backend technologies.",
+        "Engaged in several group projects, gaining exposure to collaborative software development practices, such as version control with Git.",
+      ],
     },
   ],
   experience: [
     {
-      position: "Software Engineer",
-      company: "Tech Innovations Inc.",
+      position: "Software Developer",
+      company: "Tech Solutions Inc.",
       experienceDetails: [
-        "Developed backend services using Node.js and MongoDB for cloud applications",
-        "Collaborated with frontend developers to integrate REST APIs into a user-friendly interface",
-        "Designed and implemented an automated testing suite to improve quality assurance",
+        "Designed and built a cloud-based inventory management system using Node.js, MongoDB, and Express.js, significantly improving operational efficiency.",
+        "Collaborated with cross-functional teams to define system requirements and implement new features that increased user engagement by 30%.",
+        "Developed a RESTful API and integrated it with third-party services such as payment gateways and email notification systems.",
+        "Optimized backend performance, reducing query response time by 20% through better indexing and caching strategies.",
       ],
       experienceStartDate: "2019-07-01",
       experienceEndDate: "2024-11-13",
@@ -159,61 +171,66 @@ const emilyClarke = {
     },
     {
       position: "Junior Web Developer",
-      company: "Web Solutions LLC",
+      company: "Creative Agency",
       experienceDetails: [
-        "Built responsive websites using HTML, CSS, and JavaScript frameworks",
-        "Collaborated on projects using Git for version control and GitHub for project management",
-        "Optimized website performance and SEO for client websites",
+        "Built and maintained dynamic websites using WordPress and custom themes, ensuring they met clients’ needs and followed best SEO practices.",
+        "Worked closely with clients to define their vision, translating requirements into responsive and accessible web solutions.",
+        "Optimized websites for mobile use, ensuring that they provided a smooth experience across devices and screen sizes.",
+        "Implemented best practices for website performance, reducing page load times by 40% using lazy loading, image compression, and code splitting.",
       ],
-      experienceStartDate: "2017-05-01",
-      experienceEndDate: "2019-06-01",
+      experienceStartDate: "2017-06-01",
+      experienceEndDate: "2019-06-30",
       companyCountry: "San Francisco",
       companyCity: "CA",
     },
   ],
   projects: [
     {
-      projectName: "WeatherApp",
-      projectStack: "React, Node.js, OpenWeatherMap API",
+      projectName: "Task Tracker",
+      projectStack: "React, Node.js, Express, MongoDB",
       projectDetails: [
-        "Created a weather forecasting app using React and OpenWeatherMap API to fetch real-time data",
-        "Implemented state management with Redux to handle user preferences",
-        "Deployed the app to Heroku for global access",
+        "Developed a task management app that tracks team progress and deadlines, enabling teams to collaborate efficiently.",
+        "Implemented secure user authentication using JWT tokens, allowing users to safely log in and access their tasks.",
+        "Used React for the front-end and Express with MongoDB for the backend, creating a seamless user experience with real-time updates.",
+        "Implemented full CRUD functionality to manage tasks, enabling users to create, edit, delete, and mark tasks as completed.",
       ],
-      projectStartDate: "2020-02-01",
-      projectEndDate: "2020-12-01",
+      projectStartDate: "2020-01-01",
+      projectEndDate: "2021-12-01",
     },
     {
-      projectName: "Portfolio Website",
-      projectStack: "HTML, CSS, JavaScript, React",
+      projectName: "Weather App",
+      projectStack: "JavaScript, HTML, CSS, OpenWeatherMap API",
       projectDetails: [
-        "Designed and developed a personal portfolio website to showcase projects and skills",
-        "Implemented a contact form using JavaScript and integrated email notifications",
-        "Optimized site for mobile-first design using responsive web techniques",
+        "Built a simple weather app that allows users to check the weather forecast for any city worldwide.",
+        "Integrated OpenWeatherMap API to fetch real-time weather data, including temperature, humidity, and wind speed.",
+        "Implemented error handling and validation for user input, including city names and incorrect API keys, to ensure a smooth user experience.",
+        "Created a responsive UI using CSS, ensuring the app worked seamlessly across desktop and mobile devices.",
       ],
-      projectStartDate: "2018-05-01",
-      projectEndDate: "2018-08-01",
+      projectStartDate: "2018-06-01",
+      projectEndDate: "2018-09-01",
     },
   ],
   skills: [
     {
       skillName: "Languages",
       skillDetails:
-        "JavaScript, Python, Java, SQL (MySQL), HTML/CSS, TypeScript",
+        "JavaScript, Python, C#, SQL (MySQL, MongoDB), TypeScript, HTML/CSS",
     },
     {
       skillName: "Frameworks",
-      skillDetails: "React, Express, Node.js, Angular, Django",
+      skillDetails:
+        "React, Express, Node.js, Angular, .NET Core, Flask, Django",
     },
     {
       skillName: "Developer Tools",
-      skillDetails: "Git, Docker, GitHub, VS Code, Jenkins, Firebase",
+      skillDetails:
+        "Git, Docker, Jenkins, VS Code, IntelliJ IDEA, Postman, AWS",
     },
     {
       skillName: "Libraries",
-      skillDetails: "jQuery, Bootstrap, Lodash",
+      skillDetails: "jQuery, Axios, Bootstrap, Material-UI",
     },
   ],
 };
 
-export { emilyClarke, jakeRyan };
+export { jakeRyan, alexSmith };
