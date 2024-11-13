@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { formatDate } from "../../utils/FormatDate";
+import { formatDate } from "../../utils/Formatter";
 
 function EducationForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(

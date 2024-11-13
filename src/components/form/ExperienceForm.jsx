@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import removeIcon from "../../assets/icons/recycle-bin.png";
-import { formatDate } from "../../utils/FormatDate";
+import { formatDate } from "../../utils/Formatter";
 import { EditIcon, TrashBinIcon } from "../../assets/icons/svgModule";
 function ExperienceForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(

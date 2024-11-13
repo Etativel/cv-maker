@@ -3,6 +3,9 @@
   width: 100vw;
   overflow-x: hidden;
   display: flex;
+  /* gap: 24px; */
+  /* justify-content: center; */
+  /* max-width: fit-content; */
 }
 
 @media print {
