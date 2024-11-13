@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Canvas from "./components/Canvas";
 import { useState } from "react";
 import { jakeRyan, emilyClarke } from "./utils/DummyData";
-const dummy = emilyClarke;
+const dummy = jakeRyan;
 
 function App() {
   const [profile, setProfile] = useState(dummy.personal);

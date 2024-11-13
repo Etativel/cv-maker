@@ -4,7 +4,7 @@ function EducationComponent({ education }) {
   return (
     <>
       {education.map((edu, index) => (
-        <div key={"edu" + index} className="edu-1 edu-content">
+        <div key={index} className={`edu-${index} edu-content`}>
           <div className="edu-info">
             <p className="education-place">
               <strong>{edu.school}</strong>
