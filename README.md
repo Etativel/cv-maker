@@ -56,3 +56,7 @@ User-friendly CV maker designed to simplify and enhance professional CV creation
 - **Load Sample CV**: Click "Load Dummy" to view a sample CV in the editor.
 - **Reset**: Clear all inputs to start anew.
 - **Download CV**: Once satisfied with your CV, use the download option to save a PDF copy.
+
+### Credits
+
+This resume design was inspired by Jake Gutierrez’s Resume Template, which provides a simple and elegant structure for professional CVs. You can view it on [Overleaf](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and on [GitHub](https://github.com/jakegut/resume).
