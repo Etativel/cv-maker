@@ -26,6 +26,7 @@ const downloadPDF = (fileName) => {
 
   paperElement.style.width = "22cm";
   paperElement.style.height = "29.7cm";
+  paperElement.style.marginBottom = "24px";
   paperElement.style.paddingBottom = "1200px";
 
   nameAndLinkContainer.style.paddingBottom = "24px";
@@ -43,7 +44,7 @@ const downloadPDF = (fileName) => {
     const pdf = new jsPDF({
       orientation: "portrait",
       unit: "cm",
-      format: [22, 29.7],
+      format: "a4",
     });
 
     const pageWidth = pdf.internal.pageSize.getWidth();
