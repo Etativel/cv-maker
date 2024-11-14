@@ -43,7 +43,7 @@ const downloadPDF = (fileName) => {
     const pdf = new jsPDF({
       orientation: "portrait",
       unit: "cm",
-      format: [21, 29.7],
+      format: [22, 29.7],
     });
 
     const pageWidth = pdf.internal.pageSize.getWidth();
