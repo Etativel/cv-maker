@@ -47,7 +47,7 @@ User-friendly CV maker designed to simplify and enhance professional CV creation
    ```bash
    npm run dev
    ```
-   Visit http://localhost:3000 to start using the Resume Builder app locally.
+   Visit http://localhost:5173/ to start using the Resume Builder app locally.
 
 ### Usage
 
