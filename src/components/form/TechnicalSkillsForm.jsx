@@ -59,7 +59,7 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
       </div>
       <div className="s-e-c-container">
         <button className="form-add-btn" type="submit">
-          {initialValues ? "Save" : "Add"}
+          Save
         </button>
         {onCancel && (
           <button className="form-cancel-btn" type="button" onClick={onCancel}>
@@ -73,8 +73,10 @@ function SkillForm({ initialValues, onSubmit, onCancel }) {
 
 export default function SkillSection({ skills, setSkills }) {
   const [editIndex, setEditIndex] = useState(null);
+  const [showForm, setShowForm] = useState(false);
   const addSkill = (newSkill) => {
     setSkills([...skills, newSkill]);
+    setShowForm(false);
   };
 
   const updateSkill = (updatedSkill, index) => {
@@ -94,6 +96,10 @@ export default function SkillSection({ skills, setSkills }) {
 
   const handleCancelEdit = () => {
     setEditIndex(null);
+  };
+
+  const handleCancelAdd = () => {
+    setShowForm(false);
   };
   return (
     <>
@@ -135,7 +141,14 @@ export default function SkillSection({ skills, setSkills }) {
             )}
           </div>
         ))}
-        {editIndex === null && <SkillForm onSubmit={addSkill} />}
+        {editIndex === null &&
+          (showForm ? (
+            <SkillForm onSubmit={addSkill} onCancel={handleCancelAdd} />
+          ) : (
+            <button className="add-form-btn" onClick={() => setShowForm(true)}>
+              + Add Skill
+            </button>
+          ))}
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import { useState } from "react";
 import removeIcon from "../../assets/icons/recycle-bin.png";
 import { formatDate } from "../../utils/Formatter";
 import { EditIcon, TrashBinIcon } from "../../assets/icons/svgModule";
+
 function ExperienceForm({ initialValues, onSubmit, onCancel }) {
   const [formValues, setFormValues] = useState(
     initialValues || {
@@ -162,6 +163,7 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
         <label>
           <strong className="block-title">Experience Details</strong>
         </label>
+
         {formValues.experienceDetails.map((detail, index) => (
           <div key={index} className="experience-detail-item">
             <textarea
@@ -181,6 +183,7 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
             </button>
           </div>
         ))}
+
         <button
           type="button"
           className="add-btn-list"
@@ -192,7 +195,7 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
 
       <div className="s-e-c-container">
         <button className="form-add-btn" type="submit">
-          {initialValues ? "Save" : "Add"}
+          Save
         </button>
         {onCancel && (
           <button className="form-cancel-btn" type="button" onClick={onCancel}>
@@ -206,9 +209,10 @@ function ExperienceForm({ initialValues, onSubmit, onCancel }) {
 
 export default function ExperienceSection({ experience, setExperience }) {
   const [editIndex, setEditIndex] = useState(null);
-
+  const [showForm, setShowForm] = useState(false);
   const addExperience = (newExperience) => {
     setExperience([...experience, newExperience]);
+    setShowForm(false);
   };
 
   const updateExperience = (updatedExperience, index) => {
@@ -229,6 +233,10 @@ export default function ExperienceSection({ experience, setExperience }) {
 
   const handleCancelEdit = () => {
     setEditIndex(null);
+  };
+
+  const handleCancelAdd = () => {
+    setShowForm(false);
   };
 
   return (
@@ -276,7 +284,14 @@ export default function ExperienceSection({ experience, setExperience }) {
         </div>
       ))}
 
-      {editIndex === null && <ExperienceForm onSubmit={addExperience} />}
+      {editIndex === null &&
+        (showForm ? (
+          <ExperienceForm onSubmit={addExperience} onCancel={handleCancelAdd} />
+        ) : (
+          <button className="add-form-btn" onClick={() => setShowForm(true)}>
+            + Add Experience
+          </button>
+        ))}
     </div>
   );
 }

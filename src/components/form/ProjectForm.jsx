@@ -154,7 +154,7 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
 
       <div className="s-e-c-container">
         <button className="form-add-btn" type="submit">
-          {initialValues ? "Save" : "Add"}
+          Save
         </button>
         {onCancel && (
           <button className="form-cancel-btn" type="button" onClick={onCancel}>
@@ -168,9 +168,11 @@ function ProjectForm({ initialValues, onSubmit, onCancel }) {
 
 export default function ProjectsSection({ projects, setProjects }) {
   const [editIndex, setEditIndex] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
   const addProject = (newProject) => {
     setProjects([...projects, newProject]);
+    setShowForm(false);
   };
 
   const updateProject = (updatedProject, index) => {
@@ -191,6 +193,10 @@ export default function ProjectsSection({ projects, setProjects }) {
 
   const handleCancelEdit = () => {
     setEditIndex(null);
+  };
+
+  const handleCancelAdd = () => {
+    setShowForm(false);
   };
 
   return (
@@ -238,7 +244,14 @@ export default function ProjectsSection({ projects, setProjects }) {
         </div>
       ))}
 
-      {editIndex === null && <ProjectForm onSubmit={addProject} />}
+      {editIndex === null &&
+        (showForm ? (
+          <ProjectForm onSubmit={addProject} onCancel={handleCancelAdd} />
+        ) : (
+          <button className="add-form-btn" onClick={() => setShowForm(true)}>
+            + Add Project
+          </button>
+        ))}
     </div>
   );
 }

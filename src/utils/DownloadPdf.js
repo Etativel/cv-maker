@@ -6,15 +6,17 @@ const downloadPDF = (fileName) => {
   const paperElement = document.querySelector(".paper");
 
   html2canvas(paperElement, {
-    scale: 5,
+    // scale: 5,
+    scale: 2,
     useCORS: true,
   }).then((canvas) => {
-    const imgData = canvas.toDataURL("image/png", 1.0);
+    // const imgData = canvas.toDataURL("image/png", 1.0);
+    const imgData = canvas.toDataURL("image/png", 0.9);
     const pdf = new jsPDF({
       orientation: "portrait",
       unit: "cm",
       format: "a4",
-      compression: "NONE",
+      // compression: "NONE",
     });
 
     const pageWidth = pdf.internal.pageSize.getWidth();

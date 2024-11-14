@@ -28,23 +28,17 @@ export default function Canvas({
   font,
 }) {
   return (
-    <div className="canvas">
-      <Paper
-        profile={profile}
-        education={education}
-        experience={experience}
-        projects={projects}
-        skills={skills}
-        font={font}
-      />
-      {/* <Paper
-        profile={profile}
-        education={education}
-        experience={experience}
-        projects={projects}
-        skills={skills}
-        font={font}
-      /> */}
+    <div className="canvas-container">
+      <div className="canvas">
+        <Paper
+          profile={profile}
+          education={education}
+          experience={experience}
+          projects={projects}
+          skills={skills}
+          font={font}
+        />
+      </div>
     </div>
   );
 }

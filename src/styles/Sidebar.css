@@ -8,10 +8,12 @@
 
 .sidebar-container {
   height: 100vh;
+
   overflow-y: auto;
 }
 
 .sidebar {
+  /* min-width: 600px; */
   background-color: #ffffff;
   flex-grow: 4;
   max-width: 650px;
@@ -38,8 +40,8 @@
 .education-details-container,
 .personal-details-container {
   background-color: white;
-  margin: 12px 24px;
-  padding: 32px;
+  margin: 0px 24px;
+  padding: 24px 32px;
   border-radius: 6px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -86,8 +88,9 @@
 
 .top-field {
   display: flex;
-  gap: 12px;
+  gap: 18px;
   height: fit-content;
+  flex-wrap: wrap;
 }
 .right-field,
 .left-field {
@@ -165,6 +168,7 @@ label {
   padding-top: 18px;
   padding-bottom: 12px;
 }
+.add-form-btn,
 .add-btn-list {
   display: block;
   width: 100%;
@@ -174,13 +178,20 @@ label {
   margin-top: 24px;
   /* margin-bottom: 24px; */
   color: var(--blue-text);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 24px;
   transition: background-color 0.2s ease;
 }
+
+.add-form-btn {
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 12px;
+}
+.add-form-btn:hover,
 .add-btn-list:hover {
   cursor: pointer;
   background-color: var(--blue-back);
@@ -441,4 +452,47 @@ label {
 .s-e-c-container {
   display: flex;
   gap: 12px;
+}
+
+/* Hide Form */
+.hide-form {
+  /* display: none; */
+}
+
+/* Media Queries */
+@media (min-width: 1500px) {
+  .sidebar {
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .sidebar {
+    max-width: 100vw;
+    height: fit-content;
+  }
+
+  .top-field {
+    flex-wrap: wrap;
+  }
+
+  .sidebar-head,
+  .skill-details-container,
+  .project-details-container,
+  .experience-details-container,
+  .education-details-container,
+  .personal-details-container {
+    margin: 0px;
+    padding: 12px 16px;
+
+    /* margin: 0px; */
+    /* padding: 0px; */
+  }
 }
