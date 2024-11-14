@@ -4,7 +4,6 @@ export default function SidebarHead({ fileName, setFileName }) {
   return (
     <div className="sidebar-head">
       <div className="file-name">
-        {" "}
         <input
           type="text"
           value={fileName}

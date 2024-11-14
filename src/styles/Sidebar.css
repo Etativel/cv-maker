@@ -272,8 +272,6 @@ label {
   text-align: center;
   font-size: 2rem;
   width: fit-content;
-  /* min-width: 100px;
-  max-width: 200px; */
 }
 
 .file-name-input {

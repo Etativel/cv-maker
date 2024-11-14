@@ -1,16 +1,6 @@
 .container {
-  /* max-height: 100vh; */
-  /* height: 100px; */
-  /* height: fit-content; */
-  /* width: 100vw; */
   overflow-x: hidden;
   display: flex;
-  /* overflow-y: auto; */
-  /* background-color: blue; */
-  /* gap: 24px; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* max-width: fit-content; */
 }
 
 @media print {
@@ -19,7 +9,7 @@
   }
 
   .canvas {
-    height: auto; /* Allow the content to adjust to A4 page size */
+    height: auto;
     width: auto;
   }
   .paper {

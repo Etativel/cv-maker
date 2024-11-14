@@ -6,7 +6,6 @@ import ProfileForm from "./form/PersonalForm";
 import EducationSection from "./form/EducationForm";
 import ExperienceSection from "./form/ExperienceForm";
 import ProjectsSection from "./form/ProjectForm";
-import { downloadPDF } from "../utils/DownloadPdf";
 import SkillSection from "./form/TechnicalSkillsForm";
 import SidebarHead from "./form/SidebarHead";
 import SidebarNav from "./form/SidebarNav";

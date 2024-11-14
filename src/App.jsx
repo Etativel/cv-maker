@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Canvas from "./components/Canvas";
