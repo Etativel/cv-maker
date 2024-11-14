@@ -11,18 +11,22 @@ const downloadPDF = (fileName) => {
     ".skill-container, .projects-container, .experience-container, .education-container"
   );
 
-  const originalWidth = paperElement.style.width;
-  const originalHeight = paperElement.style.height;
-  const originalPaddingBottom = paperElement.style.paddingBottom;
-  const originalPaddingLeftContainer = [];
-  const originalPaddingRightContainer = [];
-  const originalPaddingBottomNameLink =
-    nameAndLinkContainer.style.paddingBottom;
-
-  containers.forEach((container) => {
-    originalPaddingLeftContainer.push(container.style.paddingLeft);
-    originalPaddingRightContainer.push(container.style.paddingRight);
-  });
+  // Save original styles
+  const originalStyles = {
+    paper: {
+      width: paperElement.style.width,
+      height: paperElement.style.height,
+      marginBottom: paperElement.style.marginBottom,
+      paddingBottom: paperElement.style.paddingBottom,
+    },
+    nameAndLinkContainer: {
+      paddingBottom: nameAndLinkContainer.style.paddingBottom,
+    },
+    containers: Array.from(containers).map((container) => ({
+      paddingLeft: container.style.paddingLeft,
+      paddingRight: container.style.paddingRight,
+    })),
+  };
 
   paperElement.style.width = "22cm";
   paperElement.style.height = "29.7cm";
@@ -66,15 +70,18 @@ const downloadPDF = (fileName) => {
 
     pdf.save(`${onSaveFileName}.pdf`);
 
-    paperElement.style.width = originalWidth;
-    paperElement.style.height = originalHeight;
-    paperElement.style.paddingBottom = originalPaddingBottom;
+    paperElement.style.width = originalStyles.paper.width;
+    paperElement.style.height = originalStyles.paper.height;
+    paperElement.style.paddingBottom = originalStyles.paper.paddingBottom;
 
-    nameAndLinkContainer.style.paddingBottom = originalPaddingBottomNameLink;
+    nameAndLinkContainer.style.paddingBottom =
+      originalStyles.nameAndLinkContainer.paddingBottom;
 
     containers.forEach((container, index) => {
-      container.style.paddingLeft = originalPaddingLeftContainer[index];
-      container.style.paddingRight = originalPaddingRightContainer[index];
+      container.style.paddingLeft =
+        originalStyles.containers[index].paddingLeft;
+      container.style.paddingRight =
+        originalStyles.containers[index].paddingRight;
     });
   });
 };
