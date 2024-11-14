@@ -9,7 +9,7 @@ import ProjectsSection from "./form/ProjectForm";
 import { downloadPDF } from "../utils/DownloadPdf";
 import SkillSection from "./form/TechnicalSkillsForm";
 import SidebarHead from "./form/SidebarHead";
-
+import SidebarNav from "./form/SidebarNav";
 export default function Sidebar({
   profile,
   education,
@@ -30,6 +30,12 @@ export default function Sidebar({
 }) {
   return (
     <div className="sidebar">
+      <SidebarNav
+        fileName={fileName}
+        setFileName={setFileName}
+        clearState={clearState}
+        setData={setData}
+      />
       <SidebarHead
         fileName={fileName}
         setFileName={setFileName}

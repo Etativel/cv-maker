@@ -1,13 +1,6 @@
 /* eslint-disable react/prop-types */
-import { downloadPDF } from "../../utils/DownloadPdf";
-import { alexSmith } from "../../utils/DummyData";
 
-export default function SidebarHead({
-  fileName,
-  setFileName,
-  clearState,
-  setData,
-}) {
+export default function SidebarHead({ fileName, setFileName }) {
   return (
     <div className="sidebar-head">
       <div className="file-name">
@@ -20,7 +13,7 @@ export default function SidebarHead({
           onChange={(e) => setFileName(e.target.value)}
         />
       </div>
-      <div className="div-head-btn">
+      {/* <div className="div-head-btn">
         <button onClick={clearState} className="s-h-btn clear-all">
           Clear All
         </button>
@@ -36,7 +29,7 @@ export default function SidebarHead({
         >
           Load Template
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

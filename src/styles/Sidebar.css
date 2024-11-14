@@ -4,6 +4,8 @@
   --blue-back: #f4faff;
   --red-delete: rgba(252, 0, 5, 255);
   --green-edit: #28a745;
+  --blue-1: #c6e7ff;
+  --blue-2: #bfecff;
 }
 
 .sidebar-container {
@@ -454,9 +456,123 @@ label {
   gap: 12px;
 }
 
-/* Hide Form */
-.hide-form {
-  /* display: none; */
+/* Sidebar Nav */
+.s-nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 12px;
+  border-bottom: solid 2px #eff2f9;
+}
+
+.repo-link,
+.home-btn {
+  background-color: white;
+  border: 0px;
+  font-size: 1.3rem;
+  color: var(--blue-text);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.repo-link {
+  text-decoration: none;
+}
+
+.github-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.sidebar-btn {
+  border: 0px;
+  background-color: white;
+}
+
+.sidebar-icon {
+  height: 28px;
+  width: 28px;
+  transform: scale(1);
+  transition: transform 0.1s ease;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown menu */
+.dropdown-container {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  right: 0;
+  flex-direction: column;
+  /* justify-co ntent: end; */
+  align-items: flex-end;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  /* padding: 4px; */
+}
+
+.download-icon,
+.reset-icon,
+.load-icon {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+}
+
+.drop-btn {
+  text-align: start;
+  padding-left: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 300px;
+  background-color: white;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.drop-btn:hover {
+  background-color: var(--blue-text);
+  color: white;
+  cursor: pointer;
+}
+
+.drop-btn:hover .download-icon,
+.drop-btn:hover .reset-icon,
+.drop-btn:hover .load-icon {
+  stroke: white;
+}
+
+.show-dropdown-menu {
+  opacity: 1;
+  transform: scaleY(1);
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 /* Media Queries */

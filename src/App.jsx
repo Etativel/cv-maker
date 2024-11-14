@@ -3,11 +3,10 @@ import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Canvas from "./components/Canvas";
 import { useState, useEffect } from "react";
-import { jakeRyan } from "./utils/DummyData";
 
 function App() {
   const [data, setData] = useState([]);
-  const [fileName, setFileName] = useState("untitled");
+  const [fileName, setFileName] = useState("Untitled");
   const [profile, setProfile] = useState("");
   const [education, setEducation] = useState([]);
   const [experience, setExperience] = useState([]);
@@ -33,7 +32,7 @@ function App() {
 
   function clearState() {
     console.log("cleared");
-    setFileName("untitled");
+    setFileName("Untitled");
     setData({});
     setProfile("");
     setEducation([]);
