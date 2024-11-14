@@ -41,7 +41,6 @@ User-friendly CV maker designed to simplify and enhance professional CV creation
 
    ```bash
    npm install
-   Run the application:
    ```
 
 3. Run the aplication
