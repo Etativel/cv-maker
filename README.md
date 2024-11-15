@@ -56,3 +56,7 @@ User-friendly CV maker designed to simplify your CV creation. This web app provi
 ### Credits
 
 This resume design was inspired by Jake Gutierrez’s Resume Template, which provides a simple and elegant CVs. You can view it on [Overleaf](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and on [GitHub](https://github.com/jakegut/resume).
+
+### License
+
+Code and design are published under the MIT License.
