@@ -1,7 +1,7 @@
 # Resume Builder
 
-**Make resume for your career.**  
-User-friendly CV maker designed to simplify and enhance professional CV creation. This web app provides an ATS-friendly, professionally crafted template for Software Engineers.
+**Simplify the process of crafting your resume.**  
+User-friendly CV maker designed to simplify your CV creation. This web app provides an ATS-friendly and cool looking template for Software Engineers.
 
 🌐 **Live Demo**: [https://resume-builder-etv.netlify.app/](https://resume-builder-etv.netlify.app/)
 
@@ -18,17 +18,15 @@ User-friendly CV maker designed to simplify and enhance professional CV creation
 - **Real-Time Preview**: See your CV update instantly as you make changes.
 - **Responsive UI**: Designed to adapt across devices, offering seamless experience on desktop and mobile.
 - **Mobile-Friendly Unique Layout**: Optimized layout for mobile users, ensuring clarity and accessibility.
-- **Load Dummy**: Load a sample CV to explore the template’s potential.
-- **Reset Option**: Clear all fields to start fresh whenever you need.
 - **Download CV**: Export your completed CV with ease using `html2canvas` and `JsPDF`.
 
 ### Technologies Used
 
-- **HTML & CSS**: Structure and styling for a polished and professional UI.
-- **JavaScript**: Core programming language powering app functionality.
+- **HTML & CSS**: Structure and styling.
+- **JavaScript**: Core programming language for app functionality.
 - **React**: Component-based framework for interactive UI.
 - **Vite**: Fast bundling and development setup.
-- **Vercel**: Cloud platform for seamless deployment.
+- **Netlify**: Cloud platform for seamless deployment.
 
 ### Installation
 
@@ -52,10 +50,9 @@ User-friendly CV maker designed to simplify and enhance professional CV creation
 ### Usage
 
 - **Build Your CV**: Fill in the template fields, and see your CV rendered in real-time.
-- **Load Sample CV**: Click "Load Dummy" to view a sample CV in the editor.
-- **Reset**: Clear all inputs to start anew.
+- **Load Sample CV**: Click "Load a Template" to view a sample CV in the editor.
 - **Download CV**: Once satisfied with your CV, use the download option to save a PDF copy.
 
 ### Credits
 
-This resume design was inspired by Jake Gutierrez’s Resume Template, which provides a simple and elegant structure for professional CVs. You can view it on [Overleaf](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and on [GitHub](https://github.com/jakegut/resume).
+This resume design was inspired by Jake Gutierrez’s Resume Template, which provides a simple and elegant CVs. You can view it on [Overleaf](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and on [GitHub](https://github.com/jakegut/resume).
