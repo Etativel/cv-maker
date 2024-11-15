@@ -59,4 +59,4 @@ This resume design was inspired by Jake Gutierrez’s Resume Template, which pro
 
 ### License
 
-Code and design are published under the [https://github.com/Etativel/cv-maker/blob/main/LICENSE](MIT License).
+Code and design are published under the [MIT License](https://github.com/Etativel/cv-maker/blob/main/LICENSE).
