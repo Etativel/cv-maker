@@ -26,7 +26,7 @@ User-friendly CV maker designed to simplify your CV creation. This web app provi
 - **JavaScript**: Core programming language for app functionality.
 - **React**: Component-based framework for interactive UI.
 - **Vite**: Fast bundling and development setup.
-- **Netlify**: Cloud platform for seamless deployment.
+- **Vercel**: Cloud platform for deployment.
 
 ### Installation
 
