@@ -3,7 +3,7 @@
 **Simplify the process of crafting your resume.**  
 User-friendly CV maker designed to simplify your CV creation. This web app provides an ATS-friendly and cool looking template for Software Engineers.
 
-🌐 **Live Demo**: [https://resume-builder-etv.netlify.app/](https://resume-builder-etv.netlify.app/)
+🌐 **Live Demo**: [https://cv-maker-liard-phi.vercel.app/](https://cv-maker-liard-phi.vercel.app/)
 
 ## Resume Builder Web-App
 
